@@ -31,7 +31,6 @@ class ServiceCart {
                 serviceCart.containerCart.style.display = 'none';
             });
 
-            serviceCart.containerCart.innerHTML = '';
             serviceCart.containerCart.appendChild(wrapper);
             serviceCart.containerCart.appendChild(close);
         });
