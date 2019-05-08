@@ -1,0 +1,2203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Web Courses. Module 1</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div id="preloader"></div>
+<div id="container-body">
+<div id="container-menu">
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a1"><span>01</span> Введение (домен, хостинг, браузеры, редакторы кода)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<div id="code-a1" class="container-code">
+
+<code class="html">	
+<a href="https://slides.com/wind7runner/webcourses1/" target="_blank">Презентация online</a>
+</code>
+
+<pre>
+<code class="html">
+1. Основные этапы разработки сайта
+- Составление технического задания 
+- Веб-дизайн (UI, UX)
+- Клиентская разработка (front-end) HTML, CSS, JavaScript
+- Серверная разработка (back-end) Pyton, Java, PHP, NodeJs, SQL
+- Продвижение (SEO, директ)
+</code>
+</pre>
+
+<pre>
+<code class="html">
+2. Способы создания сайта
+- Ручное программирование
+- Конструктор
+- CMS (Content management system) - система управления контентом
+- Фреймворки - программная платформа, определяющая структуру программной системы
+</code>
+</pre>
+
+<pre>
+<code class="html">
+3. Домен и хостинг сайта
+- хостинг
+- домент первого / второго / третьего уровня
+</code>
+</pre>
+
+<pre>
+<code class="html">
+4. Архитектура «Клиент-Сервер»
+- DNS
+- Браузер
+- Кеш браузера
+- Веб-сервер
+- База данных
+</code>
+</pre>
+
+<pre>
+<code class="html">
+5. Браузеры
+- Google Chrome
+- Mozilla Firefox
+- Opera
+- Safari
+- Microsoft Edge
+- Internet Explorer
+</code>
+</pre>
+
+<pre>
+<code class="html">
+6. Редакторы для веб-разработки
+- Sublime Text
+- Notepad++
+- Atom
+- Brackets
+- Codepen.io
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a2"><span>02</span> Структура HTML файла. Раздел HEAD. Парные и непарные теги</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<div id="code-a2" class="container-code">
+
+<h3>Структура HTML документа</h3>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;!-- служебная информация --&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;!-- содержимое сайта --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+<h3>Раздел HEAD (служебная информация)</h3>
+<pre>
+<code>
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;title&gt;Название сайта&lt;/title&gt;
+	&lt;meta name="description" content="Описание сайта"&gt;
+	&lt;meta name="keywords" content="Ключевые фразы через запятую"&gt;
+	&lt;link rel="icon" type="image/png" href="favicon.png"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;
+&lt;/head&gt;
+</code>
+</pre>
+
+<h3>Раздел BODY (содержимое сайта)</h3>
+<pre>
+<code class="html">
+&lt;body&gt;
+	Привет Мир!
+&lt;/body&gt;
+</code>
+</pre>
+
+<h3>Парные и непарные теги</h3>
+
+Непарный тег, выполняющий действие (задание кодировки)
+<pre>
+<code>
+&lt;meta charset="utf-8"&gt;
+</code>
+</pre>
+
+Парный тег, ограничивающий начало контента и окончание контента (заголовок сайта)
+<pre>
+<code>
+&lt;title&gt;Название сайта&lt;/title&gt;
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a3"><span>03</span> Пути к файлам. Относительные и абсолютные</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<div id="code-a3" class="container-code">
+
+<pre>
+<code class="html">
+https://yandex.ru/mail.html          - абсолютный путь
+mail.html                            - относительный путь (относительно index.html)
+</code>
+</pre>
+
+<pre>
+<code class="html">
+C:\Users\User\Desktop\www\mail.html  - абсолютный путь
+mail.html                            - относительный путь (относительно index.html)
+</code>
+</pre>
+
+<h3>Подключение файла style.css к index.html</h3>
+<pre>
+<code>
+href="style.css"     - файлы index.html и style.css находится в одной папке
+href="css/style.css" - файл style.css находится в папке "css" (директория вниз)
+href="../style.css"  - файл style.css находится на директорию выше (директория вверх)
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a4"><span>04</span> Цвета CSS (стандартные, hex, rgb). CSS селектор по имени тега</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<div id="code-a4" class="container-code">
+
+<h3>CSS селектор по имени тега</h3>
+
+<pre>
+<code class="css">
+body {
+	background: orange; - фон
+	color: blue;        - цвет текста
+}
+</code>
+</pre>
+
+<h3>Google Color Picker</h3>
+
+<img src="img/colorpicker.png" height="400px">
+<pre>
+<code class="css">
+background: orange;            - стандартное название 
+background: #4286f4;           - hex
+background: rgb(66, 134, 244); - rgb
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a5"><span>05</span> Строчные элементы (span). Работа с текстом и шрифтами</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<div id="code-a5" class="container-code">
+
+<h3>Заголовки (h1-h6)</h3>
+<pre>
+<code>
+&lt;h1&gt;Заголовок 1 уровня&lt;/h1&gt;
+&lt;h2&gt;Заголовок 2 уровня&lt;/h2&gt;
+&lt;h3&gt;Заголовок 3 уровня&lt;/h3&gt;
+&lt;h4&gt;Заголовок 4 уровня&lt;/h4&gt;
+&lt;h5&gt;Заголовок 5 уровня&lt;/h5&gt;
+&lt;h6&gt;Заголовок 6 уровня&lt;/h6&gt;
+</code>
+</pre>
+
+<h3>Строчный элемент (span)</h3>
+<pre>
+<code>
+&lt;span&gt;Строчный элемент 1&lt;/span&gt;
+&lt;span&gt;Строчный элемент 2&lt;/span&gt;
+</code>
+</pre>
+
+<h3>Особенности строчных элементов</h3>
+<pre>
+<code>
+- элементы обтекают друг друга
+- ширина равна ширине контента
+- высота равна высоте контента
+- применение свойств width и height не дает результата
+</code>
+</pre>
+
+<h3>Перенос строки (br)</h3>
+<pre>
+<code>
+Здесь нужно сделать &lt;br&gt; перенос строки
+</code>
+</pre>
+
+<h3>Абзац (p)</h3>
+<pre>
+<code>
+&lt;p&gt;Первая строка&lt;/p&gt;
+&lt;p&gt;Вторая строка&lt;/p&gt;
+</code>
+</pre>
+
+<h3>font</h3>
+<pre>
+<code class="css">
+p {
+	font-size: 20px;     - размер шрифта 
+	font-style: italic;  - начертание шрифта
+	font-weight: bold;   - насыщенность шрифта
+}
+</code>
+</pre>
+
+<h3>text</h3>
+<pre>
+<code class="css">
+p {
+	text-align: center | left | right;     - горизонтальное выравнивание текста в пределах элемента
+	text-decoration: none | underline;     - оформление текста
+	text-decoration-color: orange;         - оформление текста (цвет линии)
+	text-decoration-style: solid | double | dotted | dashed | wavy; - оформление текста (стиль линии)
+	text-indent: 20px;                     - красная строка
+	text-transform: uppercase | lowercase; - преобразованием текста элемента в заглавные или прописные символы
+}
+</code>
+</pre>
+
+<h3>text-shadow</h3>
+<pre>
+<code class="css">
+p {
+	text-shadow: 3px 4px 5px #000;
+}
+// 3px - смещение по горизонтали
+// 4px - смещени по вертикали
+// 5px - размытие
+</code>
+</pre>
+
+<pre>
+<code class="css">
+p {
+	word-spacing: 10px   - расстояние между словами
+	letter-spacing: 4px; - расстояние между буквами
+	line-height: 1.5;    - расстояние между строками
+}
+</code>
+</pre>
+
+<h3>Работа со шрифтами</h3>
+<pre>
+<code class="css">
+p {
+	font-family: Verdana; - семейство шрифта 
+}
+</code>
+</pre>
+
+Подключение шрифта
+<pre>
+<code class="css">
+@font-face {
+	font-family: OpenSans;           - имя шрифта 
+	src: url(../font/OpenSans.ttf);  - путь к файлу со шрифтом 
+}
+</code>
+</pre>
+
+Применение шрифта
+<pre>
+<code class="css">
+p {
+	font-family: OpenSans;
+}
+</code>
+</pre>
+
+<pre>
+<code class="html">
+- google fonts
+- шрифты serif и sans serif
+- font-face ninja
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a6"><span>06</span> Блочные элементы (div)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a6" class="container-code">
+
+<h3>Особенности блочных элементов</h3>
+<pre>
+<code class="html">
+- элементы на обтекают друг друга
+- ширина равна 100% от ширины родителя
+- высота равна высоте контента
+- можно применять свойства width и height
+</code>
+</pre>
+
+<h3>Внешний отступ (margin)</h3>
+
+<pre>
+<code class="css">
+div {
+	margin: 10px;                 - сверху=справа=снизу=слева=10px
+	margin: 10px 15px 20px 25px;  - сверху=10px, справа=15px, снизу=20px, слева=25px
+	margin: 10px 20px;            - сверху=снизу=10px, справа=слева=20px
+	margin-top: 10px;             - отступ сверху
+	margin-bottom: 10px;          - отступ снизу
+	margin-left: 10px;            - отступ слева
+	margin-right: 10px;           - отступ справа
+	margin: auto;                 - центрирование блока по горизонтали
+	margin: 0 auto;               - центрирование блока по горизонтали и задание отступа сверху и снизу=0
+}
+</code>
+</pre>
+
+<h3>Внутренний отступ (padding)</h3>
+
+<pre>
+<code class="css">
+div {
+	padding: 10px;                 - сверху=справа=снизу=слева=10px
+	padding: 10px 15px 20px 25px;  - сверху=10px, справа=15px, снизу=20px, слева=25px
+	padding: 10px 20px;            - сверху=снизу=10px, справа=слева=20px
+	padding-top: 10px;             - отступ сверху
+	padding-bottom: 10px;          - отступ снизу
+	padding-left: 10px;            - отступ слева
+	padding-right: 10px;           - отступ справа
+}
+</code>
+</pre>
+
+<h3>Обнуление margin и padding у body</h3>
+По умолчанию у body есть отступы
+<pre>
+<code class="css">
+body { 
+	margin: 0; 
+	padding: 0; 
+}
+</code>
+</pre>
+
+<h3>Ширина (width)</h3>
+<pre>
+<code class="css">
+div {
+	width: 500px;      - ширина 
+	max-width: 700px;  - максимальная ширина
+	min-width: 200px;  - минимальная ширина 
+}
+</code>
+</pre>
+
+<h3>Высота (height)</h3>
+<pre>
+<code class="css">
+div {
+	height: 500px;      - высота
+	max-height: 700px;  - максимальная высота
+	min-height: 200px;  - минимальная высота
+}
+</code>
+</pre>
+
+<h3>Рамка (border, border-radius). Обводка (outline)</h3>
+<pre>
+<code class="css">
+div {
+	border: 2px solid orange;           - рамка 2px сплошная оранжевая
+	border: 2px solid transparent;      - рамка 2px сплошная прозрачная
+	border-top: 2px solid orange;       - рамка сверху
+	border-bottom: 2px solid orange;    - рамка снизу
+	border-left: 2px solid orange;      - рамка слева
+	border-right: 2px solid orange;     - рамка справа
+	border-radius: 10px;                - радиус для всех четырёх углов
+	border-radius: 10px 15px;           - радиус верхнего левого и нижнего правого уголков = 10px, верхнего правого и нижнего левого углов = 15px;
+	border-radius: 10px 15px 20px 25px; - по очереди устанавливает радиус для верхнего левого, верхнего правого, нижнего правого и нижнего левого углов
+	outline: 2px solid orange;          - обводка 2px сплошная оранжевая
+}
+</code>
+</pre>
+
+<h3>Тень у блоков</h3>
+<pre>
+<code class="css">
+div {
+	box-shadow: 1px 2px 3px 4px blue;
+	box-shadow: inset 1px 2px 3px 4px blue;
+}
+// 1px - смещение по горизонтали
+// 2px - смещени по вертикали
+// 3px - размытие
+// 4px - толщина
+</code>
+</pre>
+
+Задание нескольких теней
+<pre>
+<code class="css">
+div {
+	box-shadow:
+	    0 0 0 5px red,
+	    0 0 0 10px green,
+	    0 0 0 15px blue;
+}
+</code>
+</pre>
+
+<h3>CSS Overflow </h3>
+<p>Свойство overflow управляет отображением содержания блочного элемента, если оно целиком не помещается и выходит за область заданных размеров.</p>
+
+<pre>
+<code class="css">
+div {
+	overflow: auto;   - добавление полос прокрутки, если контент не помешается в блок
+	overflow: hidden; - обрезка контента, если контент не помешается в блок
+}
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a7"><span>07</span> Единицы измерения. Относительные и абсолютные (px, %, vh, vw, em, rem)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a7" class="container-code">
+<pre>
+<code class="html">
+<b>px</b>   - абсолютная единица измерения
+<b>%</b>    - относительная, рассчитывается относительно родителя
+<b>vw</b>   - viewport width, относительная, рассчитывается относительно viewport
+<b>vh</b>   - viewport height, относительная, рассчитывается относительно viewport
+<b>em</b>   - относительная, рассчитывается относительно родителя (берет значение font-size)
+<b>rem</b>  - root em, относительная, рассчитывается относительно html (берет значение font-size)
+</code>
+</pre>
+
+<h3>Пример #1. Задание у блока 100% ширины и высоты (в процентах)</h3>
+<pre>
+<code class="css">
+html, body {
+	height: 100%;
+}
+div {
+	width: 100%;
+	height: 100%;
+}
+</code>
+</pre>
+
+<h3>Пример #2. Задание у блока 100% ширины и высоты (в vw и vh)</h3>
+<pre>
+<code class="css">
+div {
+	width: 100vw;
+	height: 100vh;
+}
+</code>
+</pre>
+
+<h3>Единица измерения em</h3>
+<pre>
+<code>
+&lt;p&gt;Текст абзаца&lt;/p&gt;
+&lt;div class="container"&gt;
+	&lt;div class="item1"&gt;Текст для item1&lt;/div&gt;
+	&lt;div class="item2"&gt;Текст для item2&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+body {
+	font-size: 20px;
+}
+.container {
+	font-size: 2em;
+}
+.item1 {
+	font-size: 2em;
+}
+.item2 {
+	font-size: 1em;
+}
+</code>
+</pre>
+
+
+<h3>Единица измерения rem</h3>
+rem берется от html
+<pre>
+<code>
+&lt;p&gt;Текст абзаца&lt;/p&gt;
+&lt;div class="container"&gt;
+    &lt;div class="item1"&gt;Текст для item1&lt;/div&gt;
+    &lt;div class="item2"&gt;Текст для item2&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+html, body {
+	font-size: 20px;
+}
+.container {
+	font-size: 2rem;
+}
+.item1 {
+	font-size: 2rem;
+}
+.item2 {
+	font-size: 1rem;
+}
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a8"><span>08</span> CSS селекторы (class, id, teg)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a8" class="container-code">
+<pre>
+<code class="html">
+<b>div</b>        - по названию тега
+<b>.class</b>     - по названию класса
+<b>#id</b>        - по названию id
+<b>div p</b>      - каскад
+<b>header, p</b>  - применение стилей к нескольким элементам
+<b>*</b>          - все элементы
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a9"><span>09</span> Организация структуры проекта. Теги HTML5 для разметки документа</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a9" class="container-code">
+
+<h3>Структура проекта</h3>
+<pre>
+<code class="html">
+<b>index.html</b>  - главный файл
+<b>favicon.png</b> - иконка для сайта
+<b>robots.txt</b>  - файл для поисковых роботов
+<b>sitemap.xml</b> - карта сайта
+</code>
+</pre>
+<pre>
+<code class="html">
+<b>css</b>         - папка для стилей
+<b>fonts</b>       - папка для шрифтов
+<b>img</b>         - папка для изображений
+<b>js</b>          - папка для javascript скриптов
+<b>libs</b>        - папка для javascript библиотек
+<b>php</b>         - папка для php скриптов
+<b>sass</b>        - папка для sass файлов
+</code>
+</pre>
+
+<h3>Стилистика написания кода</h3>
+<pre>
+<code class="html">
+- выравнивание
+- именование файлов и классов (английский язык, не транслит, слитно)
+- именование классов: item-element, item_element, itemElement
+- секции на сайте (content, container, wrapper, item, title, description)
+- сервисы для форматирования кода
+<a href="https://www.10bestdesign.com/dirtymarkup/" target="_blank">https://www.10bestdesign.com/dirtymarkup/</a>
+</code>
+</pre>
+
+<h3>Пример правильного выравнивания кода</h3>
+<img src="img/code.png" width="800px">
+
+<h3>Sublime Text (комбинации клавиш)</h3>
+<pre>
+<code class="html">
+<b>Tab</b>          - сдвинуть строки вправо
+<b>Shift+Tab</b>    - сдвинуть строки влево
+<b>Ctrl+Shift+D</b> - продублировать строку
+<b>Ctrl+F</b>       - поиск
+<b>F3</b>           - продолжить поиск на странице
+<b>Ctrl+Shift+F</b> - поиск с заменой
+<b>Ctrl + /</b>     - комментарий
+</code>
+</pre>
+
+<h3>Комментарии</h3>
+Комментарий на HTML
+<pre>
+<code>
+&lt;!-- здесь текст комментария --&gt;
+</code>
+</pre>
+
+Комментарий на CSS
+<pre>
+<code>
+/* здесь текст комментария */
+</code>
+</pre>
+
+<h3>Теги HTML5 для разметки документа</h3>
+
+<img src="img/html5_layout.png" width="800px">
+
+<pre>
+<code>
+&lt;header&gt;&lt;/header&gt;
+Элемент &lt;header&gt; задаёт «шапку» сайта или раздела, в которой обычно располагается заголовок.
+</code>
+</pre>
+
+<pre>
+<code>
+&lt;nav&gt;ссылки&lt;/nav&gt;
+Элемент &lt;nav&gt; задаёт навигацию по сайту. Если на странице несколько блоков ссылок, то в 
+&lt;nav&gt; обычно помещают приоритетные ссылки. Также допустимо использовать несколько &lt;nav&gt; в 
+документе. Запрещается вкладывать &lt;nav&gt; внутрь &lt;address&gt;
+</code>
+</pre>
+
+
+<pre>
+<code>
+&lt;main&gt;&lt;/main&gt;
+Элемент &lt;main&gt; предназначен для основного содержимого документа. На странице может быть 
+только один &lt;main&gt; и он не должен располагаться внутри элементов &lt;article&gt;, 
+&lt;aside&gt;, &lt;footer&gt;, &lt;header&gt; или &lt;nav&gt;.
+</code>
+</pre>
+
+<pre>
+<code>
+&lt;section&gt;&lt;/section&gt;
+Задаёт раздел документа, может применяться для блока новостей, контактной информации, 
+глав текста, вкладок в диалоговом окне и др. Раздел обычно содержит заголовок. 
+</code>
+</pre>
+
+<pre>
+<code>
+&lt;footer&gt;&lt;/footer&gt;
+Тег &lt;footer&gt; задаёт «подвал» сайта или раздела, в нём может располагаться имя автора, 
+дата документа, контактная и правовая информация.
+</code>
+</pre>
+
+<pre>
+<code>
+&lt;article&gt;&lt;/article&gt;
+Задаёт содержание сайта вроде новости, статьи, записи блога, форума и др.
+</code>
+</pre>
+
+<pre>
+<code>
+&lt;aside&gt;&lt;/aside&gt;
+Определяет блок сбоку от контента для размещения рубрик, ссылок на архив, меток и другой 
+информации. Такой блок, как правило, называется «сайдбар» или «боковая панель».
+</code>
+</pre>
+
+<pre>
+<code>
+&lt;figure&gt;&lt;/figure&gt;
+Используется для группирования любых элементов, например, изображений и подписей к ним. 
+&lt;figure&gt; не должен быть связан непосредственно с основным содержимым документа и при 
+его перемещении в другое место смысл текста не должен меняться. Обычно применяется для 
+иллюстраций, фрагментов кода, схем, графиков, диаграмм и др.
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a10"><span>10</span> Изображения. Фоновые изображения</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<div id="code-a10" class="container-code">
+
+<h3>Виды компьютерной графики</h3>
+<img src="img/cg.png">
+<pre>
+<code class="html">
+- Растровая 
+- Векторная
+- Трехмерная
+</code>
+</pre>
+
+<h3>Форматы изображений</h3>
+<pre>
+<code class="html">
+<b>.jpg</b> - растровая графика без прозрачности (Adobe Photoshop)
+<b>.png</b> - растровая графика с прозрачностью (Adobe Photoshop)
+<b>.svg</b> - векторная графика (Adobe Illustrator)
+</code>
+</pre>
+
+<h3>Изображения (img)</h3>
+<pre>
+<code>
+&lt;img src="img/picture.jpg" alt="Альтернативный текст" title="Подсказка"&gt;
+</code>
+</pre>
+
+<h4>Атрибуты (img)</h4>
+<pre>
+<code>
+<b>src</b>   - путь к графическому файлу
+<b>alt</b>   - альтернативный текст для изображения
+<b>title</b> - содержимое элемента в виде всплывающей подсказки
+</code>
+</pre>
+
+<h4>Стилизация на CSS</h4>
+<pre>
+<code>
+При одновременном задании width и height возникает искажение пропорций.
+Поэтому следует задавать только width или только height
+</code>
+</pre>
+
+<pre>
+<code>
+Без искажения пропорций применяется свойство object-fit со значениями contain или cover 
+<b>object-fit: cover;</b>   - элемент увеличивается или уменьшается, чтобы целиком заполнить заданную область с сохранением пропорций
+<b>object-fit: contain;</b> - элемент масштабируется, чтобы целиком уместиться в заданные размеры с соблюдением пропорций
+Свойство <b>не работает</b> в Internet Explorer!
+</code>
+</pre>
+
+<h3>Фоновые изображения (background-image)</h3>
+
+<pre>
+<code class="css">
+div {
+	background-image: url(img.png);                - путь к изображению
+	background-repeat: no-repeat;                  - повторение изображения
+	background-position: center center;            - позиционирование изображения (задние в px и %)
+	background-size: contain;                      - изображение полностью помещается в блок
+	background-size: cover;                        - изображение заполняет весь блок
+	background-size: 50%;                          - задание в %
+	background-color: #3b3b3b;                     - цвет фона
+	background-attachment: fixed;                  - будет ли прокручиваться фоновое изображение
+	background: url(img.png) no-repeat center 50%; - сокращенная запись
+}	
+</code>
+</pre>
+
+<h3>Оптимизация изображений</h3>
+<pre>
+<code class="html">
+<a href="https://tinypng.com/" target="_blank">https://tinypng.com/</a>
+</code>	
+</pre>
+
+<h3>Варианты применения</h3>
+<pre>
+<code>
+img              - логотипы, картинки товаров, уникальные изображения, которые должны индексироваться поисковиками
+background-image - фоновые изображения
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a11"><span>11</span> Прозрачность элементов в CSS (opacity, rgba)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a11" class="container-code">
+<pre>
+<code class="css">
+div {
+	opacity: 0.4;                      - задание прозрачности всему блоку и дочерним элементам
+	background: rgba(66,134,244,0.4);  - задание прозрачности только фону блока через альфа-канал
+}
+</code>
+</pre>
+
+<pre>
+<code class="html">
+rgba()
+<b>r</b> - red
+<b>g</b> - green
+<b>b</b> - blue 
+<b>a</b> - alpha channel
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a12"><span>12</span> Псевдоклассы (first-child, last-child, nth-child)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a12" class="container-code">
+
+<pre>
+<code>
+&lt;div class="container"&gt;
+	&lt;div class="item"&gt;item-1&lt;/div&gt;
+	&lt;div class="item"&gt;item-2&lt;/div&gt;
+	&lt;div class="item"&gt;item-3&lt;/div&gt;
+	&lt;div class="item"&gt;item-4&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+item:first-child       - первый элемент (элементы должны быть в wrapper)
+item:last-child        - последний элемент (элементы должны быть в wrapper)
+item:nth-child(2)      - второй элемент
+item:nth-child(2n)     - каждый второй элемент
+item:nth-child(even)   - каждый четный элемент
+item:nth-child(odd)    - каждый нечетный элемент
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a13"><span>13</span> Табличные элементы (table)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a13" class="container-code">
+
+<pre>
+<code>
+&lt;table&gt; – контейнер
+&lt;tr&gt; - table row (строка)
+&lt;td&gt; - table data (ячейка)
+&lt;th&gt; - table header (ячейка заголовка)
+&lt;td rowspan="2"&gt; – объединение строк
+&lt;td colspan="2"&gt; – объединение столбцов 
+</code>
+</pre>
+
+<h3>Пример таблицы</h3>
+
+<img src="img/table1.png" height="170">
+
+<pre>
+<code>
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Заголовок 1&lt;/th&gt;
+		&lt;th&gt;Заголовок 2&lt;/th&gt;
+		&lt;th&gt;Заголовок 3&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1 строка 1 столбец&lt;/td&gt;
+		&lt;td&gt;1 строка 2 столбец&lt;/td&gt;
+		&lt;td&gt;1 строка 3 столбец&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;2 строка 1 столбец&lt;/td&gt;
+		&lt;td&gt;2 строка 2 столбец&lt;/td&gt;
+		&lt;td&gt;2 строка 3 столбец&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+table {
+  border: 2px solid orange;
+  border-collapse: collapse;
+}
+td, th {
+  border: 2px solid orange;
+  padding: 5px 10px;
+}
+</code>
+</pre>
+
+<h3>Объединение строк (rowspan)</h3>
+
+<img src="img/table2.png" height="170">
+
+<pre>
+<code>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Заголовок 1&lt;/th&gt;
+        &lt;th&gt;Заголовок 2&lt;/th&gt;
+        &lt;th&gt;Заголовок 3&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;1 строка 1 столбец&lt;/td&gt;
+        &lt;td&gt;1 строка 2 столбец&lt;/td&gt;
+        &lt;td&gt;1 строка 3 столбец&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;!--&lt;td&gt;2 строка 1 столбец&lt;/td&gt;--&gt;
+        &lt;td&gt;2 строка 2 столбец&lt;/td&gt;
+        &lt;td&gt;2 строка 3 столбец&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+
+<h3>Объединение столбцов (colspan)</h3>
+
+<img src="img/table3.png" height="170">
+
+<pre>
+<code>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Заголовок 1&lt;/th&gt;
+        &lt;th&gt;Заголовок 2&lt;/th&gt;
+        &lt;th&gt;Заголовок 3&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="2"&gt;1 строка 1 столбец&lt;/td&gt;
+        &lt;!--&lt;td&gt;1 строка 2 столбец&lt;/td&gt;--&gt;
+        &lt;td&gt;1 строка 3 столбец&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;2 строка 1 столбец&lt;/td&gt;
+        &lt;td&gt;2 строка 2 столбец&lt;/td&gt;
+        &lt;td&gt;2 строка 3 столбец&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+
+<h3>Стилизация таблицы</h3>
+
+<img src="img/table4.png" height="170">
+
+<pre>
+<code>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Заголовок 1&lt;/th&gt;
+        &lt;th&gt;Заголовок 2&lt;/th&gt;
+        &lt;th&gt;Заголовок 3&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1 строка 1 столбец&lt;/td&gt;
+        &lt;td&gt;1 строка 2 столбец&lt;/td&gt;
+        &lt;td&gt;1 строка 3 столбец&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;2 строка 1 столбец&lt;/td&gt;
+        &lt;td&gt;2 строка 2 столбец&lt;/td&gt;
+        &lt;td&gt;2 строка 3 столбец&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3 строка 1 столбец&lt;/td&gt;
+        &lt;td&gt;3 строка 2 столбец&lt;/td&gt;
+        &lt;td&gt;3 строка 3 столбец&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;4 строка 1 столбец&lt;/td&gt;
+        &lt;td&gt;4 строка 2 столбец&lt;/td&gt;
+        &lt;td&gt;4 строка 3 столбец&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+table {
+	border: 1px solid #ededed;
+	border-collapse: collapse;
+}
+td, th {
+	padding: 5px 15px;
+}
+th {
+	background: #b1dbbb;
+	color: #4c4c4c;
+}
+tr:nth-child(odd) {
+	background: #ededed;
+	color: black;
+}
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a14"><span>14</span> CSS Display (block, inline, table, none)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a14" class="container-code">
+
+<h3>Основные элементы</h3>
+<pre>
+<code class="css">
+div {
+	display: block;         - блок
+	display: inline;        - строка
+	display: inline-block;  - блок-строка
+	display: table;         - блочная таблица
+	display: table-cell;    - ячейка таблицы
+	display: none;          - нет
+	display: flex;          - flexbox элемент
+	display: grid;          - grid элемент
+}
+</code>
+</pre>
+
+<img src="img/display.png" height="350">
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a15"><span>15</span> Псевдоэлементы (before, after)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a15" class="container-code">
+
+<pre>
+<code>
+Псевдоэлемент before - добавляет content перед контентом блока
+Псевдоэлемент after  - добавляет content после контента блока
+</code>
+</pre>
+
+<img src="img/after.png" height="100">
+
+<pre>
+<code>
+&lt;div&gt;содержимое&lt;/div&gt;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+div {
+	padding: 20px;
+	width: 400px;
+}
+div::before {
+	content: "добавлено через before";
+	background: white;
+}
+div::after {
+	content: "добавлено через after";
+	background: white;
+}
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a16"><span>16</span> Float. Обтекание блоков. Clearfix. Box-sizing. Calc()</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a16" class="container-code">
+
+<h3>Обтекание (float)</h3>
+<pre>
+<code>
+<b>float: left;</b>   - выравнивает элемент по левому краю, все остальные элементы обтекают его по правой стороне
+<b>float: right;</b>  - выравнивает элемент по правому краю, все остальные элементы обтекают его по левой стороне
+<b>float: none;</b>   - обтекание элемента не задается
+</code>
+</pre>
+
+<pre>
+<code>
+<b>clear: left;</b>   - отключить обтекание слева
+<b>clear: right;</b>  - отключить обтекание справа
+<b>clear: both;</b>   - отключить обтекание справа и слева
+</code>
+</pre>
+
+<h3>Пример использования float и отключения обтекания (clearfix)</h3>
+
+<img src="img/float.png" height="170">
+
+<pre>
+<code>
+&lt;div class="container"&gt;
+	&lt;div class="item"&gt;item1&lt;/div&gt;
+	&lt;div class="item"&gt;item2&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+.container {
+	border: 2px solid blue;
+}
+.container:after{
+	content: "";    /*содержимое не нужно*/
+	display: block; /*для отключения обтекания необходим блочный элемент*/
+	clear: both;    /*отключение обтекание справа и слева*/
+}
+.item {
+	width: 100px;
+	height: 100px;
+	background: orange;
+	padding: 20px;
+	margin: 5px;
+}
+.item:first-child {
+	float: left;   /*применение обтекания слева*/
+}
+.item:last-child {
+	float: right; /*применение обтекания справа*/
+}
+</code>
+</pre>
+
+<h3>Изменение алгоритма расчёта ширины и высоты элемента (box-sizing)</h3>
+<pre>
+<code class="css">
+box-sizing: content-box; - свойства width и height не включают в себя значения margin, padding и border
+box-sizing: border-box;  - свойства width и height включают в себя значения padding и border, но не margin
+</code>
+</pre>
+
+<h3>Вычисление значения (calc)</h3>
+<pre>
+<code>
+Выражение представляет собой комбинацию значений размеров и следующих знаков математических действий.
++ — сложение (width: calc(20px + 20px));
+- — вычитание (padding: calc(10% - 10px););
+* — умножение (height: calc(20%*2);)
+/ — деление. На ноль делить запрещено (width: calc(100%/3);).
+</code>
+</pre>
+
+<pre>
+<code class="css">
+div {
+	width: calc(100% - 200px);
+}
+</code>
+</pre>
+
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a17"><span>17</span> CSS Inline-block</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a17" class="container-code">
+
+<h3>display: inline-block</h3>
+
+<img src="img/inline-block.png" height="200">
+
+<pre>
+<code>
+&lt;div class="item"&gt;item-1&lt;/div&gt;
+&lt;div class="item"&gt;item-2&lt;/div&gt;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+.item {
+	width: 200px;
+	height: 200px;
+	background: orange;
+	display: inline-block;
+}
+</code>
+</pre>
+
+<h3>Выравнивание элементов по вертикали (vertical-align)</h3>
+
+<img src="img/inline-block-y.png" height="200">
+
+<pre>
+<code class="css">
+vertical-align: middle;  - по центру
+vertical-align: top;     - по верхнему краю
+vertical-align: bottom;  - по нижнему краю
+</code>
+</pre>
+
+<pre>
+<code>
+&lt;div class="item"&gt;item-1&lt;/div&gt;
+&lt;div class="item"&gt;item-2&lt;/div&gt;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+.item {
+	width: 200px;
+	background: orange;
+	display: inline-block;
+}
+.item:first-child {
+	height: 200px;
+	vertical-align: middle;
+}
+.item:last-child {
+	height: 100px;
+	vertical-align: middle;
+}
+</code>
+</pre>
+
+<h3>Выравнивание элементов по горизонтали</h3>
+
+<img src="img/inline-block-x.png" height="200">
+
+<pre>
+<code>
+&lt;div class="container"&gt;
+	&lt;div class="item"&gt;item-1&lt;/div&gt;
+	&lt;div class="item"&gt;item-2&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+<pre>
+<code>
+.container {
+	text-align: center;
+}
+.item {
+	width: 200px;
+	height: 200px;
+	background: orange;
+	display: inline-block;
+}
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a18"><span>18</span> CSS Flexbox</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a18" class="container-code">
+<pre>
+<code class="html">
+<a href="../webnotes/css_flex.html" target="_blank">Flexbox</a>
+<a href="https://flexboxfroggy.com/#ru" target="_blank">Игра Flexbox Froggy</a>
+</code>
+</pre>
+</div>
+
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a19"><span>19</span> CSS Grid</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a19" class="container-code">
+<pre>
+<code class="html">
+<a href="../webnotes/css_grid.html" target="_blank">CSS Grid</a>
+<a href="https://cssgridgarden.com/#ru" target="_blank">Игра Grid Garden</a>
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a20"><span>20</span> Позиционирование блочных элементов (position)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a20" class="container-code">
+
+<h3>Виды позиционирования</h3>
+<pre>
+<code class="css">
+<b>position: static;</b>    - статичное (стандартное позиционирование)
+<b>position: relative;</b>  - относительное (положение устанавливается относительно его исходного места)
+<b>position: absolute;</b>  - абсолютное (отсчёт координат ведётся от края окна браузера, если у родителя не установлено position: relative)
+<b>position: fixed;</b>     - фиксированное (привязывается к указанной свойствами left, top, right и bottom точке на экране)
+<b>position: sticky;</b>    - сочетание относительного и фиксированного позиционирования
+</code>
+</pre>
+
+<h3>Свойства left, right, top, bottom</h3>
+Применяются для всех видов позиционирования кроме static
+<pre>
+<code class="css">
+div {
+	position: relative;
+	top: 100px;
+	left: 70px;
+}
+</code>
+</pre>
+
+<h3>Парядок расположения элементоы (z-index)</h3>
+<img src="img/z-index.png" height="200">
+<pre>
+<code class="css">
+div {
+	z-index: 1;
+}
+</code>
+</pre>
+
+</div>
+
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a21"><span>21</span> Адаптивная верстка. Мобильная версия сайта</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<div id="code-a21" class="container-code">
+
+<h3>HTML</h3>
+<pre>
+<code>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+</code>
+</pre>
+
+<h3>Стандартные разрешения экрана</h3>
+<pre>
+<code>
+320px  - мобильные устройства
+480px  - мобильные устройства
+640px  - мобильные устройства
+768px  - мобильные устройства
+1024px - планшеты
+</code>
+</pre>
+
+<h3>CSS Media queries</h3>
+Если мы верстам: pc -> tablet -> mobile
+<img src="img/adaptive/desktop-first.png" alt="" height="150px">
+<pre>
+<code class="css">
+@media screen and (max-width: 1200px) {
+    /* если ширина экрана стала меньше 1200px, применяются свойства, написанные здесь */
+}
+</code>
+</pre>
+
+Если мы верстам: mobile -> tablet -> pc (концепция Mobile First)
+<img src="img/adaptive/mobile-first.png" alt="">
+<pre>
+<code class="css">
+@media screen and (min-width: 700px) {
+    /* если ширина экрана стала больше 700px, применяются свойства, написанные здесь */
+}
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a22"><span>22</span> Регистрация домена и хостинга на Timeweb</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a22" class="container-code">
+<pre>
+<code class="html">
+<a href="https://timeweb.com/" target="_blank">Timeweb</a>
+<a href="https://timeweb.com/ru/services/hosting/" target="_blank">Timeweb. Хостинг</a>
+<a href="https://hosting.timeweb.ru/" target="_blank">Timeweb. Панель управления</a>
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a23"><span>23</span> Chrome Developer Tools (elements). Инструменты разработчика</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a23" class="container-code">
+<pre>
+<code class="html">
+F12 
+Fn+F12 для ноутбуков
+</code>
+</pre>
+<img src="img/chrome-elements.jpg" width="100%">
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a24"><span>24</span> Списки: маркированные и нумерованные (ul, ol)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a24" class="container-code">
+
+<h3>Маркированный список</h3>
+<pre>
+<code>
+&lt;ul&gt;
+	&lt;li&gt;item1&lt;/li&gt;
+	&lt;li&gt;item2&lt;/li&gt;
+	&lt;li&gt;item3&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+
+<h3>Нумерованный список</h3>
+<pre>
+<code>
+&lt;ol&gt;
+	&lt;li&gt;item1&lt;/li&gt;
+	&lt;li&gt;item2&lt;/li&gt;
+	&lt;li&gt;item3&lt;/li&gt;
+&lt;/ol&gt;
+</code>
+</pre>
+
+<h3>Настройка маркеров</h3>
+<pre>
+<code class="css">
+list-style:          list-style-type list-style-image list-style-position; 
+list-style-type:     none | circle ...          - изменяет вид маркера 
+list-style-image:    none | url('путь к файлу') - устанавливает изображение
+list-style-position: inside | outside           - размешение относительно текста    
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a25"><span>25</span> Ссылки. Виды ссылок </h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a25" class="container-code">
+<pre>
+<code>
+&lt;a href="page.html"&gt;Ссылка на другую страницу&lt;/a&gt;
+&lt;a href="page.html" target="_blank"&gt;Открытие ссылки в новой вкладке&lt;/a&gt;
+&lt;a href="https://ya.ru/"&gt;Ссылка на другой сайт&lt;/a&gt;
+&lt;a href="#about"&gt;Ссылка на место в текущей странице&lt;/a&gt;
+</code>
+</pre>
+<pre>
+<code>
+&lt;a href="tel:7777777"&gt;777-777&lt;/a&gt;
+&lt;a href="mailto:my@mail.com"&gt;my@mail.com&lt;/a&gt;
+&lt;a href="test.rar" download&gt;Скачать файл&lt;/a&gt;
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a26"><span>26</span> Создание адаптивного меню на CSS</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a26" class="container-code">
+<pre>
+<code class="html">
+<a href="https://codepen.io/Sergeenkov/pen/xzEwVp" target="_blank">Adaptive Menu (flexbox jquery)</a>
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a27"><span>27</span> Псевдоклассы (hover, not, focus, active, visited, link)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a27" class="container-code">
+<pre>
+<code class="css">
+a:hover              - наведение на элемент
+a:not(:hover)        - увод с элемента
+a:active             - активный элемент 
+a:focus              - элемент в фокусе
+a:visited            - посещеннае ссылки
+a:link               - не посещенные ссылки
+</code>
+</pre>
+<pre>
+<code class="css">
+a:hover {
+	background: orange;
+	transition: 0.4s;
+}
+a:not(:hover) {
+	transition: 0.4s;
+}
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a28"><span>28</span> Переходы в CSS (transition)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a28" class="container-code">
+
+<h3>transition (анимированный переход)</h3>
+<pre>
+<code class="css">
+transition: all 0s ease 0s;
+1. transition-property        - какие свойства анимируются
+2. transition-duration        - длина анимации
+3. transition-timing-function - как вычисляются промежуточные состояния
+4. transition-delay           - время ожидания перед запуском эффекта 
+</code>
+</pre>
+
+<pre>
+<code class="css">
+<b>transition</b>: all 0.7s ease-in 0s;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+div {
+	background: orange;
+	transition: all 0.7s ease-in 0s;
+}
+div:hover {
+	background: blue;
+}
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a29"><span>29</span> Поля ввода и кнопки (input, textarea, select, button)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a29" class="container-code">
+
+<h3>Текстовое поле (input=text)</h3>
+<pre>
+<code>
+&lt;input type="text" name="text"&gt;
+</code>
+</pre>
+<pre>
+<code class="css">
+textarea {
+	resize: none;
+}
+</code>
+</pre>
+
+<h3>Многострочной текстовое поле(textarea)</h3>
+<pre>
+<code>
+&lt;textarea&gt;Текст&lt;/textarea&gt;
+</code>
+</pre>
+
+<h3>Выпадающий список (select)</h3>
+<pre>
+<code>
+&lt;select&gt;
+	&lt;option selected=""&gt;Пункт 1&lt;/option&gt;
+	&lt;option&gt;Пункт 2&lt;/option&gt;
+	&lt;option&gt;Пункт 3&lt;/option&gt;
+&lt;/select&gt;
+</code>
+</pre>		
+
+<h3>Связанные переключатели (radio)</h3>
+<pre>
+<code>
+&lt;input type="radio" name="radio"&gt;
+&lt;input type="radio" name="radio"&gt;
+&lt;input type="radio" name="radio"&gt;
+</code>
+</pre>	
+
+<h3>Галочка (checkbox)</h3>
+<pre>
+<code>
+&lt;input type="checkbox" name="checkbox"&gt;
+</code>
+</pre>	
+
+<h3>Lable для checkbox</h3>
+<pre>
+<code class="html">
+&lt;input type="checkbox" id="checkbox"&gt;
+&lt;label for="checkbox"&gt;Нажми и выберется checkbox&lt;/label&gt;
+</code>
+</pre>
+
+<pre>
+<code class="html">
+&lt;label class="checkbox"&gt;
+	&lt;input type="checkbox"&gt;
+&lt;/label&gt;
+</code>
+</pre>	
+
+<h3>Прикрепление файла</h3>
+<pre>
+<code>
+&lt;input type="file"&gt;
+</code>
+</pre>
+
+<h3>Кнопка</h3>
+<pre>
+<code>
+&lt;button&gt;Кнопка&lt;/button&gt;
+</code>
+</pre>
+
+<h3>Особенности</h3>
+<pre>
+<code class="html">
+Наследование свойств inherit (размер шрифта, стиль шрифта)
+</code>
+</pre>
+
+<h3>Атрибуты</h3>
+<pre>
+<code class="html">
+placeholder - подсказка для input
+checked     - нажатый radio или checkbox
+selected    - выбранный option в select
+autofocus   - фокус по умолчанию
+disabled    - неактивное
+readonly    - только чтение
+</code>
+</pre>
+
+<h3>Форма (get, post)</h3>
+<pre>
+<code>
+&lt;form action="script.php" method="get"&gt;
+    &lt;input type="text" name="name" required=""&gt;
+    &lt;textarea name="message"&gt;&lt;/textarea&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+</code>
+</pre>
+
+<pre>
+<code class="html">
+http://test1.ru/script.php?name=myname&message=my+message
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a30"><span>30</span> CSS селекторы (attr)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a30" class="container-code">
+<pre>
+<code class="css">
+input[type="text"]  - все input у которых type="text"
+input[name="text"]  - все input у которых name="text"
+input[class="text"] - все input у которых class="text"
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a31"><span>31</span> Трансформация в CSS (transform). 2D преобразования</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a31" class="container-code">
+
+<h3>transform</h3>
+<pre>
+<code class="css">
+1. СДВИГ
+	translate(50px, 50px);    - сдвигает элемент на заданное значение по горизонтали и вертикали (положительное значение сдвигает вправо, отрицательное влево)
+	translateX(50px);         - сдвигает элемент по горизонтали на указанное значение
+	translateY(50px);         - сдвигает элемент по вертикали на указанное значение
+	translateZ(50px);         - сдвигает элемент по оси Z на указанное значение
+- один параметр translate(): перемещает элемент вдоль оси х
+- два параметра translate(): первое значение для оси х, второе для оси у
+</code>
+</pre>
+
+<pre>
+<code class="css">
+2. ПОВОРОТ
+	rotate(15deg);     - поворот
+	rotateX(15deg);    - поворот по оси X
+	rotateY(15deg);    - поворот по оси Y
+	rotateZ(15deg);    - поворот по оси Z
+</code>
+</pre>
+
+<pre>
+<code class="css">
+3. МАСШТАБИРОВАНИЕ
+	scale(1.2);       - масштабирует элемент по горизонтали и вертикали
+	scaleX(1.2);      - масштабирует элемент по горизонтали
+	caleY(1.2);      - масштабирует элемент по вертикали
+	scaleZ(1.2);      - масштабирует элемент по оси Z
+- один параметр scale(): изменение размеров элемента одинаково по высоте и ширине
+- два параметра scale(): первое значение изменяет размер элемента по горизонтали, второе по вертикали
+</code>
+</pre>
+
+<pre>
+<code class="css">
+4. НАКЛОН (ИСКАЖЕНИЕ)
+	skew(15deg);
+	skewX(15deg);     - наклоняет элемент на заданный угол по вертикали
+	skewY(15deg);     - наклоняет элемент на заданный угол по горизонтали
+- один параметр: элемент искажается по горизонтали;
+- два параметра: первое значение искажает элемент по горизонтали, второе по вертикали.
+</code>
+</pre>
+
+<pre>
+<code class="html">
+Особенности:
+1. Не прерывает поток (не влияют на другие элементы)
+2. Трансформации можно записывать несколько через пробел
+</code>
+</pre>
+
+<pre>
+<code class="css">
+div {
+	transform: translate(50px, 50px); 
+}
+</code>
+</pre>
+
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a32"><span>32</span> Анимация в CSS (animation)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a32" class="container-code">
+
+<h3>animation</h3>
+<pre>
+<code class="css">
+animation: none 0s ease 0s 1 normal none running;
+1. animation-name             - название анимации
+2. animation-duration         - как долго длится анимация
+3. animation-timing-function  - как вычисляются промежуточные состояния
+4. animation-delay            - анимация начинается спустя некоторое время
+5. animation-iteration-count  - сколько раз должна выполняться анимация
+6. animation-direction        - должно движение идти в обратную сторону или нет
+7. animation-fill-mode        - какие стили применяются до начала анимации и после её завершения
+8. animation-play-state       - проигрывать анимацию или поставить её на паузу
+</code>
+</pre>
+
+<img src="img/anim1.png" alt="" height="350">
+
+<pre>
+<code class="css">
+@keyframes move{
+    0%   { }
+    25%  { transform: translate(300px, 0px);   background: red; }
+    50%  { transform: translate(300px, 300px); background: gray; }
+    75%  { transform: translate(0px, 300px);   background: green; }
+    100% { }
+}
+</code>
+</pre>
+
+<pre>
+<code class="css">
+div {
+	animation-name: move;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+</code>
+</pre>
+
+<pre>
+<code class="css">
+div {
+	border: 1px solid #000;
+	width: 200px;
+	height: 200px;
+	background: orange;
+	animation: move 5s infinite; 
+}
+</code>
+</pre>
+
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a33"><span>33</span> CSS селекторы (>, +, ~)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a33" class="container-code">
+<pre>
+<code class="css">
+ul li > span        - не все span, а только дочерние span
+ul li + li          - все последующие элементы li
+.class1 ~ div       - все div элементы после class1 
+.class1 ~ *         - все элементы после class1
+</code>
+</pre>
+
+<pre>
+<code>
+&lt;div class="container"&gt;
+	&lt;div&gt;item&lt;/div&gt;
+	&lt;div&gt;item&lt;/div&gt;
+	&lt;div&gt;
+		item
+		&lt;div&gt;inside item&lt;/div&gt;
+		&lt;div&gt;inside item&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;outside&lt;/div&gt;
+&lt;div&gt;outside&lt;/div&gt;
+&lt;p&gt;outside&lt;/p&gt;
+</code>
+</pre>
+
+<pre>
+<code class="css">
+body {
+	font-size: 35px;
+}
+.container {
+	background: silver;
+}
+.container > div {
+	border: 4px solid blue;
+	margin: 10px;
+	padding: 10px;
+}
+</code>
+</pre>
+
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a34"><span>34</span> Adobe Photoshop для верстальщика </h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a34" class="container-code">
+<pre>
+<code class="html">
+Работа с PSD-макетом
+- Панель со слоями (видимость слоев, текстовые слои)
+- Текстовые слои (установка шрифтов)
+- Копировать CSS
+- Панель инструментов (Рамка, Пипетка, Заливка, Текст, Линейка)
+- Файл -> Экспортировать -> Сохранить для Web (jpg, png)
+- Перевод единицы измерения px (Редактирование -> Настройки -> Единицы измерения и линейки)
+</code>
+</pre>
+
+<h4>PSD</h4>
+<pre>
+<code class="html">
+<a href="https://yadi.sk/i/vCcaoUKJk46NUA" target="_blank">Waxom Hemepage</a>
+<a href="https://yadi.sk/i/zHuakHPUIBlLzA" target="_blank">Minimal-Template</a>
+<a href="https://yadi.sk/i/Td-wTrCd8dYKog" target="_blank">Creative Digital Agencies</a>
+</code>
+</pre>
+
+<h4>Дизайн</h4>
+<pre>
+<code class="html">
+<a href="https://www.templatemonster.com/ru/" target="_blank">templatemonster.com</a>
+<a href="https://themeforest.net/" target="_blank">themeforest.net</a>
+</code>
+</pre>
+
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a35"><span>35</span> Яндекс Карты и Google Maps для сайта</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a35" class="container-code">
+<pre>
+<code class="html">
+- статичные и динамичные карты
+- фиксированный размер
+- размер в процентах
+- scroll=false
+</code>
+</pre>
+
+<pre>
+<code>
+&lt;script 
+	type="text/javascript" 
+	charset="utf-8" 
+	async 
+	src="
+		https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor...&amp;amp;
+		width=500&amp;amp;
+		height=400&amp;amp;
+		lang=ru_RU&amp;amp;
+		scroll=false
+	"
+&gt;&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a36"><span>36</span> Яндекс Метрика</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a36" class="container-code">
+<pre>
+<code class="html">
+<a href="https://metrika.yandex.ru/" target="_blank">Яндекс.Метрика</a>
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a37"><span>37</span> Редактор кода CodePen. Плагин Emmet</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a37" class="container-code">
+<pre>
+<code class="html">
+<a href="https://codepen.io/" target="_blank">codepen.io</a>
+<a href="https://webdesign-master.ru/blog/html-css/2.html" target="_blank">Справочник Emmet</a>
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a38"><span>38</span> CSS фильтры (filter)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a38" class="container-code">
+
+<h4>Filter (не работает в IE)</h4>
+<pre>
+<code class="css">
+filter: blur(5px);         - размытие (напрямую к body применить нельзя)
+filter: brightness(150%);  - яркость, 100% по умолчанию
+filter: contrast(150%);    - контрастность, 100% по умолчанию
+filter: grayscale(70%);    - черно-белое, 0% по умолчанию
+filter: hue-rotate(90deg); - поворот оттенка, определяет угол, 0deg по умолчанию
+filter: invert(100%);      - инвертирование
+filter: opacity(50%);      - прозрачность
+filter: saturate(150%);    - изменение насыщенности
+filter: sepia(100%);       - сепия
+filter: drop-shadow(10px 10px 3px rgba(100,0,0,0.5)); - добавляет тень к изображениям, учитывая прозрачные участки
+</code>
+</pre>
+
+<pre>
+<code class="css">
+можно применять несколько фильтров
+первый фильтр применяется к исходному изображению, а остальные к предыдущему
+filter: contrast(150%) sepia(100%);
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a39"><span>39</span> Видео и аудио. Загрузка видео с YouTube</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a39" class="container-code">
+
+<pre>
+<code>
+&lt;video src="video/video.mp4" controls="controls" width="100%" height="100%" poster="poster.jpg"&gt;&lt;/video&gt;
+&lt;audio src="audio/audio.mp3" controls&gt;
+</code>
+</pre>
+
+Autoplay видео с youtube
+<pre>
+<code class="html">
+https://www.youtube.com/embed/w4C-qfaEt7Y?autoplay=1
+</code>
+</pre>
+
+<pre>
+<code class="html">
+- применение object-fit
+- применение filter
+</code>
+</pre>
+
+<pre>
+<code class="html">
+<a href="https://codepen.io/Sergeenkov/pen/eKPyPY" target="_blank">Background Video (Codepen)</a>
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a40"><span>40</span> Виджеты ВКонтакте </h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a40" class="container-code">
+<pre>
+<code class="html">
+<a href="https://vk.com/dev/widgets_for_sites" target="_blank">Виджеты</a>
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a41"><span>41</span> CSS правило @import</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a41" class="container-code">
+<pre>
+<code class="css">
+@import "style.css";
+</code>
+</pre>
+<pre>
+<code class="html">
+- подключается в начале файла стилей
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a42"><span>42</span> Переменные в CSS (область видимости)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a42" class="container-code">
+<pre>
+<code class="html">
+- уровень root и область видимости
+- резервное значение
+</code>
+</pre>
+<pre>
+<code class="css">
+:root {
+    --color:green;
+}
+body {
+    background: var(--color);
+}
+body {
+    background: var(--color,red); /* резервное значение */ 
+}
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a43"><span>43</span> Препроцессоры CSS (SASS)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a43" class="container-code">
+
+<h3>Популярные препроцессоры</h3>
+<div class="container-flex">
+<a href="https://sass-scss.ru/" target="_blank" style="margin: 10px;"><img src="img/preproc/sass.svg" alt="" height="75"></a>
+<a href="http://lesscss.org/" target="_blank" style="margin: 10px;"><img src="img/preproc/less.png" alt="" height="75"></a>
+<a href="http://stylus-lang.com/" target="_blank" style="margin: 10px;"><img src="img/preproc/stylus.svg" alt="" height="75"></a>
+</div>
+
+<pre>
+<code class="html">
+<a href="../webnotes/sass.html" target="_blank">SASS</a>
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a44"><span>44</span> HTML5 SVG. Основные фигуры</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a44" class="container-code">
+<pre>
+<code class="html">
+<a href="../webnotes/svg.html" target="_blank">SVG</a>
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a45"><span>45</span> CSS Clip-path. Задание контура</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a45" class="container-code">
+<pre>
+<code class="html">
+<a href="../webnotes/css.html#clip-path" target="_blank">Clip-path</a>
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="a46"><span>46</span> Вендорные префиксы. Автопрефиксы</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-a46" class="container-code">
+<pre>
+<code class="html">
+<a href="https://autoprefixer.github.io/ru/" target="_blank">autoprefixer</a>
+<a href="https://gulpjs.com/" target="_blank">gulp</a>
+</code>
+</pre>
+</div>
+
+
+
+
+</div>
+<div id="container-show">
+	<h1>Web Courses. Module 1 (HTML, CSS)</h1>
+	<div id="container-show-content"></div>
+</div>
+</div>
+
+    <script src="libraries/jquery.js"></script>
+	<script src="libraries/highlight/highlight.pack.js"></script>
+	<script src="js/main.js"></script>
+	<script src="module/preloader/preloader.js"></script>
+	<script src="module/scroll_up/scrollUp.js"></script>
+	<script src="module/scroll_up/script.js"></script>
+</body>
+</html>

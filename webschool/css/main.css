@@ -1,0 +1,47 @@
+
+/*
+$color-dark: #181c28;
+$color-light: #eeeeef;
+$color-gray: #51626b;
+
+$font-xs:   16px;
+$font-s:    18px; 
+$font-m:    22px; 
+$font-l:    27px; 
+$font-xl:   35px; 
+*/
+
+@font-face { font-family: PT-Sans-Bold;    src: url(../fonts/PT_Sans-Web-Bold.ttf); }
+@font-face { font-family: PT-Sans-Regular; src: url(../fonts/PT_Sans-Web-Regular.ttf); }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: PT-Sans-Regular;
+    line-height: 1.75;
+    background: #181c28;
+}
+
+*, :after, :before {
+    box-sizing: border-box; 
+}
+
+.content {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    margin: 15px auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: PT-Sans-Regular;
+    font-weight: normal !important;
+}
+
+i {
+    margin: 25px 10px 15px 0px;
+    display: block !important;
+}

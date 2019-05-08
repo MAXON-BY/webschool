@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Web Courses. Module 2</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div id="preloader"></div>
+<div id="container-body">
+<div id="container-menu">
+
+<!-- 
+57
+<pre><code class="html">
+<a href="" target="_blank"></a>
+</code></pre>
+ -->
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div class="text-header">JavaScript</div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b1"><span>01</span> Стандарт ECMAScript</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b1" class="container-code">
+
+<h3>ECMAScript</h3>
+ECMAScript является стандартом, а JavaScript — это самая популярная реализация этого стандарта
+<pre><code>
+<b>ES1</b> (1997)
+<b>ES2</b> (1998)
+<b>ES3</b> (1999)
+<b>ES4</b> (не была принята)
+<b>ES5</b> (2009)
+<b>ES6</b> (ES2015)
+<b>ES7</b> (ES2016)
+<b>ES8</b> (ES2017)
+</code></pre>
+
+<pre><code class="html">
+<a href="https://learn.javascript.ru/" target="_blank">Учебник по JavaScript</a>
+<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript" target="_blank">JavaScript MDN</a>
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="https://karmazzin.gitbooks.io/eloquentjavascript_ru/content/" target="_blank">Выразительный Javascript</a>
+</code></pre>
+
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b2"><span>02</span> Подключение файлов JavaScript</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b2" class="container-code">
+
+<h4>Подключение на странице</h4>
+<pre>
+<code>
+&lt;script&gt;
+	// js code
+&lt;/script&gt;
+</code>
+</pre>
+
+<h4>Подключение в отдельном файле</h4>
+<pre>
+<code>
+&lt;script src="js/main.js"&gt;&lt;/script&gt;
+</code>
+</pre>
+
+<pre><code class="html link-accent">
+<a href="https://learn.javascript.ru/external-script" target="_blank">Внешние скрипты, порядок исполнения</a>
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b3"><span>03</span> Типы данных. Переменные и константы. Вывод в консоль</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b3" class="container-code">
+
+<h3>Типы данных</h3>
+<pre>
+<code>
+1. Число «number»
+2. Строка «string»
+3. Булевый (логический) тип «boolean»
+4. Специальное значение «null» (отсутствие значения: пустое значение. значение записывалось)
+5. Специальное значение «undefined» (отсутствие значения: полное отсутствие значения. значение не записывалось)
+6. Объекты «object»
+</code>
+</pre>
+
+<h3>Переменные и константы</h3>
+<pre>
+<code>
+var a = 'это переменная, ее можно менять'; 
+const b = 'это константа, ее нельзя менять'; 
+</code>
+</pre>
+
+
+<h4>Типы данных (примеры)</h4>
+<pre>
+<code>
+var string = 'Это строка'; // строка
+var int    = 14;           // целое число
+var float  = 0.25;         // дробное число
+var bool   = true;         // логическое значение (только true или false)
+</code>
+</pre>
+
+<h4>Сложение чисел</h4>
+<pre>
+<code>
+var a = 10;
+var b = 20;
+var c = a + b; // Результат: 30
+</code>
+</pre>
+
+<h4>Сложение (соединение) строк</h4>
+<pre>
+<code>
+var a = 'Привет ';
+var b = 'мир';
+var c = a + b; // Результат: 'Привет мир'
+</code>
+</pre>
+
+<h4>Изменение значений переменных</h4>
+<pre>
+<code>
+var count = 32;
+count = count + 16; // 1 вариант
+count += 16;        // 2 вариант
+</code>
+</pre>
+
+<h4>Инкремент и декремент</h4>
+<pre>
+<code>
+count++;   // увеличивает на 1 после выполнения действия
+count--;   // уменьшает на 1 после выполнения действия
+++count;   // увеличивает на 1 до выполнения действия
+--count;   // уменьшает на 1 до выполнения действия
+</code>
+</pre>
+
+<h3>typeof - возвращает тип аргумента</h3>
+<pre><code class="js link-accent">
+typeof 0;     // "number"
+typeof true;  // "boolean"
+typeof 'foo'; // "string"
+</code></pre>
+
+<h3>Вывод сообщения в консоль</h3>
+<pre><code>
+console.log('Сообщение');
+console.info('Информация');
+console.warn('Предупреждение');
+console.error('Ошибка');
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="https://learn.javascript.ru/let-const" target="_blank">Переменные: let и const</a>
+</code></pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b4"><span>04</span> Виды кавычек. Шаблонные строки. Комментарии</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b4" class="container-code">
+
+<h4>Виды кавычек</h4>
+<pre><code>
+var str = 'одинарные кавычки';
+var str = "двойные кавычки";
+var str = `обратные кавычки`;
+</code></pre>
+
+<h4>Шаблонные строки</h4>
+<pre><code>
+var a = `
+	первая строка
+	вторая строка
+`;
+</code></pre>
+
+Интерполяция
+<pre><code>
+var a = 'text'; 
+var b = `строка текста ${a} строка текста`;
+</code></pre>
+
+<h4>Комментарии</h4>
+<pre><code>
+// однострочный комментарий
+/* многострочный комментарий */
+</code></pre>
+
+<h4>Экранирование кавычек</h4>
+<pre><code>
+var a = "call me \"ziggy\" now";
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b5"><span>05</span> Вывод сообщения пользователю (alert, prompt, confirm)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b5" class="container-code">
+<pre>
+<code>
+alert("Привет Мир");                      // модальное окно
+var age = prompt('Сколько Вам лет?', ''); // модальное окно с вопросом и полем ввода
+var answer = confirm('Вы согласны?');     // модальное окно да/нет (вернет bool значение)
+</code>
+</pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b6"><span>06</span> Условные операторы</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b6" class="container-code">
+
+<h3>Условный оператор if</h3>
+
+<pre><code class="js">
+=   // присвоить
+==  // равно
+!   // отрицание
+!=  // неравно
+>   // больше
+<   // меньше
+>=  // больше или равно
+<=  // меньше или равно
+&&  // логическое «И» 
+||  // логическое «ИЛИ»
+</code></pre>
+
+<span>Одно условие</span>
+<pre>
+<code>
+var weather = 'хорошая';
+if(weather == 'хорошая') {
+	console.log('Идём гулять');
+} else {
+	console.log('Идём в кино');
+}
+</code>
+</pre>
+
+<span>Несколько условий</span>
+<pre>
+<code>
+var weather = 'хорошая'; // хорошая погода
+var mood = true;         // хорошее настроение
+if( (weather == 'хорошая') && (mood) ) {
+    console.log('Идём гулять');
+} else {
+    console.log('Идём в кино');
+}
+</code>
+</pre>
+
+<h3>Условный оператор switch</h3>
+<pre><code class="js">
+var id = 3;
+
+switch(Number(id)) {
+	case 1: console.log(id); break;
+	case 2: console.log(id); break;
+	case 3: console.log(id); break;
+	default: console.log("default");
+}
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="https://learn.javascript.ru/ifelse#operator-voprositelnyy-znak" target="_blank">Тернарный оператор</a>
+<a href="https://learn.javascript.ru/comparison" target="_blank">Операторы сравнения и логические значения</a>
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b9"><span>07</span> Выборка элементов страницы</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b9" class="container-code">
+
+<h3>Объектная модель представления документа</h3>
+<pre>
+<code>
+Объектная модель представления документа. (DOM) Document Object Model
+Независящий от платформы и языка программирования способ представления документа,
+позволяющий программам и скриптам получить доступ к содержимому HTML, XHTML и XML документов,
+а также изменять содержимое, структуру и оформление таких документов
+- Всё содержимое документа представлено в виде иерархии объектов
+- Структура этой иерархии стандартизирована, чтобы обеспечить независимость от платформы
+</code>
+</pre>
+
+<h4>Структура DOM документа</h4>
+<img src="img/dev/dom.jpg" height="350">
+
+<h3>Выборка элементов страницы</h3>
+<pre><code class="js">
+var a = document.querySelector('.nav.bar');            // возвращает первый элемент внутри документа
+var a = document.querySelectorAll('.nav');             // возвращает список элементов в пределах документа
+</code></pre>
+
+<pre><code class="js link-accent">
+var a = document.getElementById('item');               // по id
+var a = document.getElementsByClassName('item')[0];    // по названию класса (первый элемент)
+var a = document.getElementsByName('item');            // по атрибуту name
+var a = document.getElementsByTagName('img');          // по названию тега (все элементы)
+</code></pre>
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b54"><span>08</span> Методы innerText и innerHTML</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b54" class="container-code">
+
+<pre><code class="html">
+&lt;div id="element"&gt;Element&lt;/div&gt;
+</code></pre>
+
+<pre><code class="js">
+var element = document.querySelector('#element');
+
+element.innerText  = 'New Text';                // изменить текст
+element.innerHTML  = '&lt;h2&gt;New HTML Code&lt;/h2&gt;';  // изменить html
+
+var text = element.innerText; // получить текст
+var html = element.innerHTML; // получить html
+</code></pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b11"><span>09</span> Функции</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b11" class="container-code">
+
+<h4>Функция, не возвращающая значение</h4>
+<pre>
+<code>
+sum(34, 12);
+function sum(a, b) {
+    var result = a + b;
+    console.log(result);
+}
+</code>
+</pre>
+
+<h4>Функция, возвращающая значение</h4>
+<pre>
+<code>
+var result = sum(34, 12);
+function sum(a, b) {
+    var result = a + b;
+    return result;
+}
+</code>
+</pre>
+
+<h4>Глобальные и локальные переменные</h4>
+<pre>
+<code>
+var a = 10; // глобальная переменная
+function test() {
+	var b = 20; // локальная переменная
+	console.log(a, b);
+}
+</code>
+</pre>
+
+<h4>Определить площадь поверхности планет</h4>
+<h5>Решение 1</h5>
+<pre>
+<code class="link-accent">
+// Площадь поверхности сферы
+// A = 4*pi*r*r
+var mars    = 3390; // km
+var mercury = 2440; // km
+const pi    = 3.14;
+var surfaceMars    = 4 * pi * mars * mars;
+var surfaceMercury = 4 * pi * mercury * mercury;
+</code>
+</pre>
+
+<h5>Решение 2 (через функции)</h5>
+<pre>
+<code class="link-accent">
+var mars    = 3390; // km
+var mercury = 2440; // km
+const pi    = 3.14;
+function surface(r) {
+	return 4 * pi * r * r;
+}
+var surfaceMars = surface(mars);
+var surfaceMercury = surface(mercury);
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b12"><span>10</span> События и обработчики событий</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b12" class="container-code">
+
+<h3>Список событий</h3>
+
+<h4>События мыши</h4>
+<ul class="list">
+	<li><span class="hl">click</span> - одиночный клик левой кнопки мыши</li>
+	<li><span class="hl">contextmenu</span> - одиночный клик правой кнопкой мыши</li>
+	<li><span class="hl">mouseover</span> - наведение мыши</li>
+	<li><span class="hl">mousedown</span> - нажатие кнопки мыши</li>
+	<li><span class="hl">mouseup</span> - отпускание кнопки мыши</li>
+	<li><span class="hl">mousemove</span> - передвижение мыши</li>
+
+	<li><span class="hl">mouseout</span> - увод мыши</li>
+	<li><span class="hl">dblclick</span> - двойной щелчек левой кнопки мыши</li>
+</ul>
+
+<h4>События на элементах управления</h4>
+<ul class="list">
+	<li><span class="hl">submit</span> - момент отправки формы обработчику (если кнопка типа "submit")</li>
+	<li><span class="hl">focus</span> - момент получения фокуса объектом (работает и для ссылок)</li>
+
+	<li><span class="hl">blur</span> - момент потери фокуса объектом (работает и для ссылок)</li>
+	<li><span class="hl">change</span> - изменение объекта формы (поле, радиобаттон и т.д.)</li>
+	<li><span class="hl">reset</span> - сброс формы (специальной кнопкой)</li>
+</ul>
+
+<h4>Клавиатурные события</h4>
+<ul class="list">
+	<li><span class="hl">keydown</span> - момент нажатия клавиши, до момента отпускания</li>
+	<li><span class="hl">keyup</span> - момент отпускания клавиши</li>
+
+	<li><span class="hl">keypress</span> - нажатие клавиши на клавиатуре</li>
+</ul>
+
+<h4>События документа</h4>
+<ul class="list">
+	<li><span class="hl">DOMContentLoaded</span> - возникает после окончательной загрузки и парсинга HTML-документа, не дожидаясь загрузки стилей, картинок и фреймов</li>
+
+	<li><span class="hl">load</span> - возникает после полного окончания загрузки ресурса (всех картинок, стиле и прочего)</li>
+	<li><span class="hl">resize</span> - изменение размеров окна браузера</li>
+	<li><span class="hl">scroll</span> - прокрутка страницы</li>
+	<li><span class="hl">unload</span> - уход со страницы</li>
+</ul>
+
+<h3>Назначение обработчиков событий</h3>
+
+<h4>1. Использование атрибута HTML</h4>
+<pre><code class="html">
+&lt;button onclick="action()"&gt;Action&lt;/button&gt;
+</code></pre>
+
+<pre><code class="js">
+function action() {
+	alert('hi');
+}
+</code></pre>
+
+<h4>2. Использование свойства DOM-объекта</h4>
+<pre><code class="html">
+&lt;button id="element"&gt;Action&lt;/button&gt;
+</code></pre>
+
+<pre><code class="js">
+var element = document.querySelector('#element');
+
+element.onclick = function() {
+	alert(1);
+}
+</code></pre>
+
+<h4>3. addEventListener</h4>
+<pre><code class="html">
+&lt;button id="element"&gt;Action&lt;/button&gt;
+</code></pre>
+
+<pre><code class="js">
+var element = document.querySelector('#element');
+
+element.addEventListener('click', function() {
+	alert(1);
+});
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="../webnotes/js.html#actions-params" target="_blank">Передаваемый параметр (Event)</a>
+<a href="https://codepen.io/Sergeenkov/pen/vzxgVg" target="_blank">Keydown Move Cube (пример)</a>
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b10"><span>11</span> Обращение к CSS свойствам и классам</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b10" class="container-code">
+
+<pre><code class="js">
+element.style.fontSize = '20px';          // css
+</code></pre>
+
+<pre><code class="js">
+element.classList;                        // массив классов элемента
+element.classList.add('active');          // добавление класса
+element.classList.remove('active');       // удаление класса
+element.classList.toggle('active');       // добавление / удаление класса
+</code></pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b55"><span>12</span> Выборка элементов формы</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b55" class="container-code">
+
+<h4>input type="text"</h4>
+<pre><code class="js">
+var a = element.value;
+element.value = 'new value';
+</code></pre>
+
+<h4>input type="checkbox"</h4>
+<pre><code class="js">
+var a = element.checked; 
+element.checked = true;
+</code></pre>
+
+<h4>input type="radio"</h4>
+<pre><code class="html">
+&lt;input type="radio" name="radio" value="r1"&gt;
+&lt;input type="radio" name="radio" value="r2"&gt;
+&lt;input type="radio" name="radio" value="r3"&gt;
+</code></pre>
+
+<pre><code class="js">
+var radio = document.querySelectorAll('input[type="radio"]');
+for(var i=0; i<=radio.length-1; i++) {
+	if(radio[i].checked) {
+		var value = radio[i].getAttribute('value');
+		console.log(value);
+	}
+}
+</code></pre>
+
+<pre><code class="js">
+radio.disabled = true;   
+</code></pre>
+
+<h4>select</h4>
+
+<pre><code class="js">
+var select = document.querySelector('select');
+var a = select.value;
+var a = select.options[select.selectedIndex].value;
+var a = select.options[select.selectedIndex].text;
+</code></pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b13"><span>13</span> Циклы for, while</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b13" class="container-code">
+
+<h4>Цикл for</h4>
+<pre><code class="js">
+for (var i = 1; i < 10; i++) {  
+    console.log(i); 
+}
+</code></pre>
+
+<h4>Цикл while</h4>
+<pre><code class="js">
+var i = 0;  
+while (i < 10) {  
+    console.log(i); 
+    i++;  
+}
+</code></pre>
+
+<h4>Цикл do while</h4>
+<pre><code class="js">
+var i = 0;  
+do {  
+    console.log(i); 
+    i++;  
+} while (i < 10);
+</code></pre>
+
+<pre><code class="js">
+break - выход из цикла
+continue - прекращает выполнение текущей итерации цикла и переходит на следующую
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="https://codepen.io/Sergeenkov/pen/VdxQOj" target="_blank">Gallery (пример)</a>
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b33"><span>14</span> Объекты</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b33" class="container-code">
+<img src="img/dev/object.png">
+
+<pre><code class="js">
+var user = {
+	name: 'Tony',
+	email: 'tony@mail.com',
+	age: 25,
+	address: {
+		street: '555 Some st',
+		city: 'Boston'
+	},
+	getData() {
+		return this.name + ' ' + this.email;
+	}
+}
+
+console.log(user.name);
+console.log(user.address.street);
+console.log(user.getData());
+</code></pre>
+
+<h4 id="cycle-obj">Цикл for..in перебора ключей объекта</h4>
+<pre><code class="js">
+for(var key in obj) {
+	console.log(key);      // ключи 
+	console.log(obj[key]); // значения
+} 
+</code></pre>
+
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b14"><span>15</span> Массивы. Методы работы с массивами</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b14" class="container-code">
+
+<h4>Объявление</h4>
+<pre><code class="js">
+var arr = [];               // объявление пустого массива
+var arr = ['Tony', 'Anne']; // объявление массива из заполненных элементов
+</code></pre>
+
+<h4>Перебор массива</h4>
+<pre><code class="js">
+for (var i=0; i<=arr.length-1; i++) {
+	console.log(arr[i]);
+}
+</code></pre>
+
+<h4>Методы</h4>
+<pre><code class="js">
+var a = arr.length;                  // длина массива (индекс последнего элемента)
+var arr2 = arr1.slice(1, 7);         // вырезать с 1 до 7 не включая, если не указан второй аргумент, то до конца
+
+var a = colors.indexOf('white');     // возвращает первый индекс, по которому элемент может быть найден в массиве или -1, если индекса нет
+var a = colors.lastIndexOf('white'); // возвращает последний индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет
+
+var a = arr.join('.');               // преобразование массива в строку с заданным разделителем
+var arr = str.split(';');            // преобразование строки с заданным разделителем в массив 
+
+arr.push('Jack');                    // добавление нового элемента в конец массива
+arr.unshift('Jack');                 // добавление нового элемента в начало массива
+arr.pop();                           // удаление элемента из конца массива
+arr.shift();                         // удаление элемента из начала массива
+
+arr.reverse();                       // реверс (переворот массива)
+arr.sort();                          // сортировка по алфавиту
+var arr = arr1.concat(arr2, arr3);   // объединение массивов
+</code></pre>
+
+<h4>Метод splice</h4>
+<pre><code class="js">
+arr.splice(3, 2);                     // удалить с 3 индекса 2 элемента
+arr.splice(2, 0, 'Алина', 'Марина');  // добавление элементов
+arr.splice(1, 2, 'Алексей", "Билл');  // замена элементов (заменить 2 удаленных элемента на Алексей, Билл)
+</code></pre>
+
+<h4>Массивы обьектов</h4>
+<pre><code class="js">
+var a = new Array(
+	{"name":"Андрей", "email":"andry@mail.ru"},
+	{"name":"Анна",   "email":"anna@mail.ru"}
+);
+
+console.log(a[0].name);  // "Андрей"
+console.log(a[1].email); // "anna@mail.ru"
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="https://learn.javascript.ru/array-iteration" target="_blank">Массив: перебирающие методы</a>
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b15"><span>16</span> Строки. Методы работы со строками</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b15" class="container-code">
+
+<h4>Перебор строки</h4>
+<pre><code class="js">
+for (var i=0; i <= str.length-1; i++) {
+	console.log(str[i]);
+}
+</code></pre>
+
+<h4>Методы</h4>
+<pre><code class="js">
+var a = str.length;            // длина строки 
+77.toString();                 // преобразование в строку
+
+var name = name.toUpperCase(); // верхний регистр
+var name = name.toLowerCase(); // нижний регистр
+
+// поиск в строке совпадений с образцом 
+var pos = str.indexOf('name');     // с начала (-1 не найдено)
+var pos = str.lastIndexOf('name'); // с конца (-1 не найдено)
+
+var root = str.slice(0, 7); // вырезать с 0 до 7 не включая
+</code></pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b16"><span>17</span> Числа. Метода работы с числами</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b16" class="container-code">
+
+<pre><code class="js">
+isNaN(num);      // если в переменной не число, вернет истину
+Number(num);     // преобразование любого объекта в число
+parseInt(num);   // преобразование в целое число
+parseFloat(num); // преобразование в целое/дробное число
+</code></pre>
+
+<h4>Остаток от деления</h4>
+<pre><code class="js">
+alert(5 % 2); // 1, остаток от деления 5 на 2
+alert(8 % 3); // 2, остаток от деления 8 на 3
+alert(6 % 3); // 0, остаток от деления 6 на 3
+</code></pre>
+
+<h3>Math</h3>
+<pre><code class="js">
+Math.round(num); // округляет число к ближайшему целому
+Math.ceil(num);  // округляет число в большую сторону
+Math.floor(num); // округляет число в меньшую сторону
+
+var rand = Math.random(); // метод генерации случайного числа в диапазоне от 0 до 1
+var rand = Math.round(Math.random() * 100); // от 0 до 100
+
+var a = Math.pow(4,2);        // степень 4 в 2
+var a = Math.sqrt(400);       // квадратный корень числа
+</code></pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b40"><span>18</span> Классы</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b40" class="container-code">
+<pre><code class="js">
+// создание класса
+class User {
+	constructor(name, age) {
+		this.name = name;
+		this.age = age;
+	}
+	authorizate() {
+		console.log('Hello' + this.name);
+	}
+}
+
+// создание экземпляра класса (объекта)
+var user = new User('Tony', 25); 
+</code></pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b32"><span>19</span> Дата и время</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b32" class="container-code">
+<pre><code class="js">
+var nowDate = new Date();                 // текущее дата и время на компьютере пользователя
+var yearFull = nowDate.getFullYear();     // год
+var month    = nowDate.getMonth();        // месяц (нумерация с 0)
+var day      = nowDate.getDate();         // число
+var dayWeek  = nowDate.getDay();          // день недели, выводит численные значения, нумерация с "0"
+var hour     = nowDate.getHours();        // час
+var minutes  = nowDate.getMinutes();      // минуты
+var seconds  = nowDate.getSeconds();      // секунды
+var mseconds = nowDate.getMilliseconds(); // миллисекунды
+</code></pre>
+
+<pre><code class="js">
+var weekday = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+var month = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+var nowDate = new Date();
+var nowDay   = weekday[nowDate.getDay()];
+var nowDate  = nowDate.getDate();
+var nowMonth = month[nowDate.getMonth()];
+</code></pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b49"><span>20</span> Local Storage</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b49" class="container-code">
+<p>Google Chrome -> F12 -> Application -> Local Storage</p>
+<p>localStorage это свойство глобального объекта браузера (window)</p>
+
+<pre><code class="js">
+localStorage.setItem('id', '77');   // добавляет в localStorage новый ключ со значением (а если такой ключ уже существует, то перезаписывает новым значением)
+var a = localStorage.getItem('id'); // получить значение
+localStorage.removeItem('id');      // удаление ключа
+localStorage.clear();               // очистка всего хранилища
+</code></pre>
+
+<h4>Объекты и массивы</h4>
+<pre><code class="js">
+var obj = {
+	item1: 1,
+	item2: [123, "two", 3.0],
+	item3: "hello"
+};
+
+localStorage.setItem("key", JSON.stringify(obj));        // сериализация объекта и запись в хранилище по ключу "key"
+var returnObj = JSON.parse(localStorage.getItem("key")); // из json в объект
+</code></pre>
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b19"><span>21</span> Атрибуты</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b19" class="container-code">
+
+<pre><code class="js">
+var a1 = element.attributes;         // массив атрибутов
+var a2 = element.hasAttribute('id'); // проверить наличие атрибута
+var a3 = element.getAttribute('id'); // получить значение атрибута
+element.setAttribute('id', 'new');   // установить атрибут
+element.removeAttribute('id');       // удалить атрибут
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="https://codepen.io/Sergeenkov/pen/xzEwVp" target="_blank">Адаптивное меню (пример)</a>
+</code></pre>
+
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b45"><span>22</span> Создание элементов</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b45" class="container-code">
+
+<h4>Создание</h4>
+<pre><code class="js">
+var element = document.<bg-code>createElement</bg-code>('div');
+element.innerHTML = 'Go to google';
+element.className = 'class-google';
+</code></pre>
+
+<h4>Добавление на страницу</h4>
+<pre><code class="js">
+var wrapper = document.querySelector('#wrapper');
+
+wrapper.<bg-code>appendChild</bg-code>(element);                      // внутри элемента после контента
+wrapper.<bg-code>insertBefore</bg-code>(element, wrapper.lastChild);  // внутри элемента перед контентом
+wrapper.parentNode.<bg-code>insertBefore</bg-code>(element, wrapper); // после элемента
+wrapper.parentNode.<bg-code>appendChild</bg-code>(element);           // до элемента
+wrapper.parentNode.<bg-code>replaceChild</bg-code>(element, wrapper); // заменить элемент другим элементом
+
+// insertBefore (1 - элемент который вставляем, 2 - элемент перед которым вставляем)
+// insertBefore (1 - чем заменяем, 2 - что заменяем)
+</code></pre>
+
+<h4>Удаление</h4>
+<pre><code class="js">
+wrapper.parentNode.<bg-code>removeChild</bg-code>(element); // удаление нового элемента
+wrapper.parentNode.<bg-code>removeChild</bg-code>(wrapper); // удаление элемента обертки
+document.body.<bg-code>removeChild</bg-code>(element);      // удаление нового элемента (если родитель body)
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b43"><span>23</span> Объявление функций</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b43" class="container-code">
+
+<ul class="list-point">
+	<li><span class="hl">Function Declaration</span> - функция, объявленная в основном потоке кода, создаются интерпретатором до выполнения кода</li>
+	<li><span class="hl">Function Expression</span> - объявление функции в контексте какого-либо выражения, например присваивания. Создаются в процессе выполнения выражения, в котором созданы, в данном случае при операции присваивания</li>
+</ul>
+
+
+<!------------------------------------------------------>
+<h3>1. Function Declaration</h3>
+<!------------------------------------------------------>
+<pre><code class="js">
+function func(num) {
+	console.log(num);
+}
+func(1);
+</code></pre>
+
+<pre><code class="js">
+// присвоили ссылку на функцию
+var a = func;
+function func(){
+	//
+}
+</code></pre>
+
+<!------------------------------------------------------>
+<h3>2. Function Expression (выражения функции)</h3>
+<!------------------------------------------------------>
+<pre><code class="js">
+var func = function(num) {
+	console.log(num);
+}
+func(2);
+</code></pre>
+
+<h4>Функцию можно скопировать в другую переменную</h4>
+<pre><code class="js">
+function sayHi() {   // создать функцию и поместить её в переменную sayHi
+	alert( "Привет" );
+}
+
+var func = sayHi;    // копирование функции в новую переменную
+func(); // Привет    // функцию можно вызывать и как sayHi() и как func()
+</code></pre>
+
+<!------------------------------------------------------>
+<h3>3. Анонинимное с немедленным вызовом (самовызывающаяся)</h3>
+<!------------------------------------------------------>
+<pre><code class="js">
+(function(num) {
+	console.log(num);
+}(3));
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="http://jsraccoon.ru/es6-defaults" target="_blank">Параметры по умолчанию (ES6)</a>
+<a href="http://jsraccoon.ru/es6-arrow-functions" target="_blank">Стрелочные функции (ES6)</a>
+<a href="https://learn.javascript.ru/closures" target="_blank">Замыкания</a>
+<a href="https://learn.javascript.ru/recursion" target="_blank">Рекурсия, стек</a>
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="https://www.youtube.com/playlist?list=PLqHlAwsJRxAOpWPtj2T6HhSzX-lKmKV2q" target="_blank">Основы ES6</a>
+<a href="https://getinstance.info/articles/javascript/call-apply-and-bind-functions/" target="_blank">Функции call(), apply() и bind()</a>
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b35"><span>24</span> Таймеры</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b35" class="container-code">
+<h4>setTimeout - однократное выполнение кода</h4>
+
+<pre><code class="js">
+var timer = setTimeout(function() { 
+	console.log('go'); 
+}, 1000);
+
+clearTimeout(timer);
+</code></pre>
+
+<h4>setInterval - многократное выполнение кода</h4>
+<pre><code class="js">
+var timer = setInterval(function() { 
+	console.log('go'); 
+}, 1000);
+
+clearInterval(timer);
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b46"><span>25</span> Обработка исключений</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b46" class="container-code">
+
+<pre><code class="js">
+try {
+	// инструкции, которые могут бросить исключение
+} catch (идентификатор) {
+	// инструкции будут выполняться если в try произошло исключение
+	// передается выражение (идентификатор), которое было в throw
+} finally {
+	// инструкции будут выполняться независимо от исключения
+}
+// catch или finally может отсутствовать
+// если ошибка необработана, скрипт не будет выполняться
+// если ошибка обработана в catch, скрипт продолжит выполнение
+</code></pre>
+
+<pre><code class="js">
+try {
+	throw new Error('Panic!');
+} catch (e) {
+	console.log(e.message);
+} finally {
+	console.log('Код, который нужно выполнить');
+}
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b50"><span>26</span> AJAX</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b50" class="container-code">
+
+<pre><code class="html">
+1. XMLHttpRequest (не используют в явном виде, создаются обертки)
+2. Fetch (нативный, полифил для IE)
+3. Axios
+</code></pre>
+
+<!------------------------------------------------------>
+<h3>Axios</h3>
+<!------------------------------------------------------>
+<pre><code class="html">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<!-- _________________________________________-->
+<h4>GET-запрос с возвратом одного значения</h4>
+<pre><code class="js">
+axios.get('script.php')
+    .then(function(response) {
+        console.log(response.data); // 'Hi'
+    })
+    .catch(function(error) {
+        console.log(error)
+    });
+</code></pre>
+<pre><code class="php">
+&lt;?php
+    echo 'Hi';
+?&gt;
+</code></pre>
+
+<!-- _________________________________________-->
+<h4>GET-запрос с возвратом нескольких значений (array)</h4>
+<pre><code class="js">
+axios.get('script.php')
+    .then(function(response) {
+		console.log(response.data); // ['Jack', 25]
+    })
+</code></pre>
+<pre><code class="php">
+&lt;?php
+    $arr = array("Jack", 25);
+    $json = json_encode($arr);
+    echo $json
+?&gt;
+</code></pre>
+
+<!-- _________________________________________-->
+<h4>GET-запрос с возвратом нескольких значений (object)</h4>
+<pre><code class="js">
+axios.get('script.php')
+    .then(function(response) {
+		console.log(response.data); // {name: "Jack", age: 25}
+    })
+</code></pre>
+<pre><code class="php">
+&lt;?php
+    $arr = array("name" => "Jack", "age" => 25);
+    $json = json_encode($arr);
+    echo $json
+?&gt;
+</code></pre>
+
+<!-- _________________________________________-->
+<h4>POST-запрос</h4>
+<pre><code class="js">
+axios.post('script.php', {
+    name: 'Jack',
+    age: '25'
+})
+	.then(function (response) {
+	    console.log(response.data);
+	})
+</code></pre>
+<pre><code class="php">
+&lt;?php
+    $content = file_get_contents("php://input");
+    $decoded = json_decode($content, true);
+    echo $decoded[name];
+?&gt;
+</code></pre>
+
+<!------------------------------------------------------>
+<h3>Отправка сообщения на почту</h3>
+<!------------------------------------------------------>
+<pre><code class="php">
+&lt;?php
+	$to      = 'user1@example.com, user2@example.com'; // получатель или получатели
+	$subject = 'Письмо с сайта';                       // тема письма
+	$message = 'Сообщение';                            // сообщение
+
+	$email = mail($to, $subject, $message);
+	if ($email) {
+	    echo 'Письмо успешно отправлено!';
+	} else {
+	    echo 'Письмо не отправлено!';
+	}
+?&gt;
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="https://habr.com/ru/company/ruvds/blog/337662/" target="_blank">JavaScript: методы асинхронного программирования</a>
+<a href="https://ru.hexlet.io/blog/posts/javascript-what-the-heck-is-a-callback" target="_blank">Функции обратного вызова (Collback Function)</a>
+<a href="https://learn.javascript.ru/promise" target="_blank">Promise</a>
+<a href="https://www.youtube.com/watch?v=5kAPExqSZ1I" target="_blank">Асинхронные функции</a>
+</code></pre>
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b56"><span>27</span> HTML5 рисование на Canvas</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b56" class="container-code">
+<pre><code class="html">
+<a href="../webnotes/canvas.html" target="_blank">Canvas</a>
+</code></pre>
+</div>
+
+
+
+
+
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div class="text-header">Технологии и инструменты</div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b51"><span>01</span> jQuery и jQuery UI</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b51" class="container-code">
+
+<!------------------------------------------------------>
+<h3>Работа с элементами на странице</h3>
+<!------------------------------------------------------>
+<h4>Выборка элементов страницы на jquery</h4>
+<pre>
+<code>
+var a = $('p');     // по названию тега 
+var a = $('.box');  // по названию класса
+var a = $('#box');  // по id
+var a = $('div a'); // вложенные теги
+</code>
+</pre>
+
+<h4>Действия (методы) над выбранными элементами</h4>
+<pre>
+<code>
+var text = $('#box').text();        // получить текст
+var html = $('#box').html();        // получить html
+$('#box').text('Измененный текст'); // изменить текст
+$('#box').html('Измененный html');  // изменить html
+</code>
+</pre>
+
+<h4>before(); after(); prepend(); append();</h4>
+<pre>
+<code>
+$('#box').before('content');  // добавляет контент до выбранного элемента
+$('#box').after('content');   // добавляет контент после выбранного элемента
+$('#box').prepend('content'); // добавляет контент внутрь выбранного элемента до остального кода
+$('#box').append('content');  // добавляет контент внутрь выбранного элемента после остального кода
+</code>
+</pre>
+
+<!------------------------------------------------------>
+<h3>CSS</h3>
+<!------------------------------------------------------>
+<h4>css();</h4>
+<pre>
+<code>
+var a = $('#box').css('color');    // получить css свойство
+$('#box').css('color', 'orange');  // изменить css свойство
+
+// изменение нескольких css свойств
+$('#box').css({
+	'color':'orange', 
+	'font-size':'25px'
+}); 
+</code>
+</pre>
+
+<h4>addClass(); removeClass();</h4>
+<pre>
+<code>
+$('#box').addClass('open');    // добавление класса
+$('#box').removeClass('open'); // удаление класса
+</code>
+</pre>
+
+<h4>toggleClass();</h4>
+Переключатель классов. Добавляет элементу указанный класс, если его нет. Иначе удаляет
+<pre>
+<code>
+$('#box').toggleClass('open');
+</code>
+</pre>
+
+<!------------------------------------------------------>
+<h3>События и обработчики событий</h3>
+<!------------------------------------------------------>
+<h4>Добавление обработчиков событий</h4>
+<pre>
+<code>
+// обработчик события щелчка мыши
+$('.item').on('click', function(){
+	console.log('Щелчок мыши'); 
+});
+</code>
+</pre>
+
+<h4>Удаление обработчиков событий</h4>
+Метод <b>.off()</b> удаляет обработчики событий, назначенные методом <b>.on</b>
+<pre>
+<code>
+$('.item').off('click');
+</code>
+</pre>
+
+<!------------------------------------------------------>
+<h3>Атрибуты</h3>
+<!------------------------------------------------------>
+<h4>attr(); removeAttr();</h4>
+<pre><code>
+var id = $('#box').attr("id"); // получить значение атрибута
+$('#box').attr('size', 4);     // изменить значение атрибута
+$('#box').removeAttr('title'); // удалить атрибут
+</code></pre>
+
+<!------------------------------------------------------>
+<h3>Плавное изменение свойств на jquery</h3>
+<!------------------------------------------------------>
+<h4>hide(); show();</h4>
+Скрывает/показывает элементы на странице (за счет плавного изменения его размера и прозрачности)
+<pre>
+<code>
+$('#box').hide(1000); // скрыть элемент 
+$('#box').show(1000); // показать элемент
+// 1 - скорость исчезновения (миллисекунды 1с = 1000мс)
+// 2 - функция, которая будет выполнена после завершения работы
+$('#box').hide(1000).show(1000); // цепные функции
+</code>
+</pre>
+
+<h4>slideUp(); slideDown();</h4>
+Разворачивает/сворачивает элементы на странице (за счет плавного изменения высоты элементов)
+<pre>
+<code>
+$('#box').slideUp(1000);   // исчезновение (элемент уезжает наверх)
+$('#box').slideDown(1000); // появление (элемент выезжает вниз)
+</code>
+</pre>
+
+<h4>slideToggle();</h4>
+Поочередно разворачивает/сворачивает элементы на странице, как это делают .slideUp() и .slideDown()
+<pre>
+<code>
+$('#box').slideToggle();
+</code>
+</pre>
+
+<h4>fadeIn(); fadeOut();</h4>
+Скрывает/показывает элементы на странице за счет плавного изменения прозрачности
+<pre>
+<code>
+$('#box').fadeIn(1000);  // плавное появление элемента
+$('#box').fadeOut(1000); // плавное исчезновение элемента
+// 1 - время исчезновения
+// 2 - функция, которая будет выполнена после исчезновения
+</code>
+</pre>
+
+<h4>fadeTo();</h4>
+Плавно изменяет прозрачность элементов
+<pre>
+<code>
+$('#box').fadeTo(1000,0.4);
+// 1 - время исчезновения
+// 2 - прозрачность от 0 до 1
+// 3 - функция, которая будет выполнена после исчезновения
+</code>
+</pre>
+
+<h4>fadeToggle();</h4>
+Поочередно скрывает/показывает элементы на странице, как это делают .fadeIn() и .fadeOut()
+<pre>
+<code>
+$('#box').fadeToggle();
+</code>
+</pre>
+
+<!------------------------------------------------------>
+<h3>Подключение файлов</h3>
+<!------------------------------------------------------>
+<pre><code>
+// загружаем html код из файла в блок
+$.get("include/header.html", {}, function(data) { 
+	$('header').html(data);  
+});
+</code></pre>
+
+<!------------------------------------------------------>
+<h3>jQuery UI</h3>
+<!------------------------------------------------------>
+<pre><code class="html">
+<a href="https://jqueryui.com/" target="_blank">jQuery UI</a>
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b41"><span>02</span> Vue.js</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b41" class="container-code">
+<pre><code class="html">
+<a href="../webnotes/vue_js.html" target="_blank">Vue.js</a>
+</code></pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b22"><span>03</span> Gulp и NPM для сборки проектов</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b22" class="container-code">
+<pre><code class="html">
+<a href="../webnotes/npm.html" target="_blank">Gulp</a>
+</code></pre>
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b53"><span>04</span> GitHub</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b53" class="container-code">
+<pre><code class="html">
+<a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a>
+<a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown</a>
+</code></pre>
+
+<pre><code class="html link-accent">
+<a href="https://www.youtube.com/playlist?list=PL3LQJkGQtzc5rDeb7FjACNb6sOW300yA0" target="_blank">[playlist] GitHub для новичков</a>
+</code></pre>
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b38"><span>05</span> Подключение сторонних скриптов (слайдер)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b38" class="container-code">
+
+<h4>Slider</h4>
+<pre><code class="html">
+<a href="http://kenwheeler.github.io/slick/" target="_blank">Slick Slider</a>
+<a href="https://codepen.io/Sergeenkov/pen/vVBPdv" target="_blank">Slick Slider (CodePen)</a>
+<a href="https://owlcarousel2.github.io/OwlCarousel2/" target="_blank">Owl Carousel 2</a>
+</code></pre>
+
+<h4>Animate Scroll Action</h4>
+<pre><code class="html">
+<a href="https://codepen.io/Sergeenkov/pen/ERMpmg" target="_blank">Animate.css Wow.js</a>
+<a href="https://codepen.io/Sergeenkov/pen/LJwOga" target="_blank">Scroll Action (CodePen)</a>
+</code></pre>
+
+<h4>Animate Scroll Top</h4>
+<pre><code class="html">
+<a href="https://github.com/markgoodyear/scrollup" target="_blank">markgoodyear/scrollup</a>
+<a href="https://codepen.io/Sergeenkov/pen/Edxwqy" target="_blank">Animate Scroll Top (CodePen)</a>
+</code></pre>
+
+<h4>Gamma Gallery</h4>
+<pre><code class="html">
+<a href="https://tympanus.net/codrops/2012/11/06/gamma-gallery-a-responsive-image-gallery-experiment/" target="_blank">Gamma Gallery</a>
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b21"><span>06</span> Отладка в браузере Chrome</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b21" class="container-code">
+<img src="img/dev/chrome-sources.png" height="400px">
+</div>
+
+
+
+
+</div>
+<div id="container-show">
+	<h1>Web Courses. Module 2 (JavaScript)</h1>
+	<div id="container-show-content"></div>
+</div>
+</div>
+
+    <script src="libraries/jquery.js"></script>
+	<script src="libraries/highlight/highlight.pack.js"></script>
+	<script src="js/main.js"></script>
+	<script src="module/preloader/preloader.js"></script>
+	<script src="module/scroll_up/scrollUp.js"></script>
+	<script src="module/scroll_up/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Web Courses. Module 3</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div id="preloader"></div>
+<div id="container-body">
+<div id="container-menu">
+
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div class="text-header">PHP и MySQL</div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b23"><span>01</span> Отправка сообщения на почту</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b23" class="container-code">
+
+<img src="img/dev/client-server.jpg" height="500px" class="img-center ">
+
+<h3>Обращение к php скрипту через Ajax</h3>
+<pre><code class="html">
+<a href="../webnotes/js_ajax.html" target="_blank">Ajax</a>
+<a href="https://yadi.sk/d/XoMo5o8ZZHQ1eQ" target="_blank">Denwer</a>
+<a href="https://ospanel.io/" target="_blank">Open Server</a>
+</code></pre>
+
+<h3>Отправка сообщения на почту</h3>
+<pre><code>
+$.get("php/mail.php", {message:'Сообщение'}, function(data) {
+    alert(data);
+});
+</code>	</pre>
+<pre><code>
+&lt;?php
+	$to      = 'user@example.com, anotheruser@example.com'; // получатель / получатели
+	$subject = 'Письмо с сайта';                            // тема письма
+	$message = $_GET[message];                              // сообщение
+
+	$email = mail($to, $subject, $message);
+	if ($email) {
+	    echo 'Письмо успешно отправлено!';
+	} else {
+	    echo 'Письмо не отправлено!';
+	}
+?&gt;
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b25"><span>02</span> MySQL</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b25" class="container-code">
+
+<h4>Создание базы данных и таблиц MySQL</h4>
+<pre><code class="html">
+<a href="../webnotes/mysql.html" target="_blank">mysql</a>
+<a href="http://localhost/Tools/phpmyadmin/" target="_blank">phpmyadmin</a>
+</code></pre>
+
+<h4>Основные выборки MySQL: SELECT, INSERT, UPDATE, DELETE</h4>
+<h4>Записи в таблице</h4>
+<pre><code>
+<b>SELECT * FROM products WHERE ID=2</b>                                  - выбор 1 записи
+<b>SELECT * FROM products</b>                                             - выбор всех записей
+<b>INSERT INTO products(NAME, DESCRIPTION) VALUES ('Имя', 'Описание')</b> - добавление новой записи
+<b>UPDATE products SET NAME='Имя', DESCRIPTION='Описание' WHERE ID=2</b>  - редактирование записи
+<b>DELETE FROM products WHERE ID=2</b>                                    - удаление записи
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b27"><span>03</span> Работа с MySQL</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b27" class="container-code">
+
+<pre><code>
+- подключение (dbConnect.php)
+- выборка данных (dbSelect.php)
+- вставка, обновление, удаление данных (dbModify.php)
+</code></pre>
+
+<pre><code class="html">
+<a href="../webnotes/php_db.html" target="_blank">php database</a>
+</code></pre>
+
+<h4>dbConnect.php</h4>
+<pre><code>
+&lt;?php
+	$host = 'localhost';
+	$user = 'root';
+	$pass = '';
+	$db = 'sample';
+
+    $link = mysqli_connect($host, $user, $pass, $db); 
+    mysqli_set_charset($link, 'utf8');           
+    if(!$link) {
+        exit(mysqli_error($link));
+    } 
+?&gt;
+</code></pre>
+
+<h4>dbModify.php</h4>
+<pre><code>
+&lt;?php
+	include('dbConnect.php');
+
+	$sql = $_GET[sql];
+	$query = mysqli_query($link, $sql);
+	$insert_id = mysqli_insert_id($link);
+
+	$arr = array($query, $insert_id);
+	echo json_encode($arr);
+?&gt;
+</code></pre>
+
+<h4>dbSelect.php</h4>
+<pre><code>
+&lt;?php
+	include('dbConnect.php');
+	
+	$sql = $_GET[sql];
+	$query = mysqli_query($link, $sql);
+	$num_rows = mysqli_num_rows($query);
+	$arr = array();
+
+	if ($num_rows != 0) {
+		while($row = mysqli_fetch_array($query)) {
+			array_push($arr, $row);
+		}
+	}
+
+	echo json_encode($arr);
+?&gt;
+</code></pre>
+
+<h4>main.js</h4>
+<pre><code>
+dbInsert();
+function dbInsert() {
+	var name = 'Добавлено имя из JS';
+	var price = 12;
+	var description = 'Добавлено описание из JS';
+	var sql = `INSERT INTO products(NAME, PRICE, DESCRIPTION) VALUES ('${name}', ${price}, '${description}')`;
+	$.get('php/dbModify.php', {sql:sql}, function(data){
+		var arr = eval(data);
+		alert(arr[]);
+	});
+}
+</code></pre>
+<pre><code>
+dbUpdate();
+function dbUpdate() {
+	var id = 5;
+	var name = 'Обновлено имя из JS';
+	var price = 44;
+	var description = 'Обновлено описание из JS';
+	var sql = `UPDATE products SET NAME='${name}', PRICE=${price}, DESCRIPTION='${description}' WHERE ID=${id}`;
+	$.get('php/dbModify.php', {sql:sql}, function(data){
+		var arr = eval(data);
+		alert(arr[]);
+	});
+}
+</code></pre>
+<pre><code>
+dbDelete();
+function dbDelete() {
+	var id = 5;
+	var sql = `DELETE FROM products WHERE ID=${id}`;
+	$.get('php/dbModify.php', {sql:sql}, function(data){
+        var arr = eval(data);
+        alert(arr[0]);
+	});
+}
+</code></pre>
+<pre><code>
+dbSelect();
+function dbSelect() {
+	var sql = `SELECT * FROM products`;
+	$.get('php/dbSelect.php', {sql:sql}, function(data){
+		var arr = eval(data); 
+		if (arr.length != 0) {
+			for (var i=0; i<=arr.length-1; i++) {
+				var id          = arr[i]['ID'];
+				var name        = arr[i]['NAME'];
+				var price       = arr[i]['PRICE'];
+				var description = arr[i]['DESCRIPTION'];
+				$('body').append(`&lt;p&gt;${id} ${name} ${price} ${description}&lt;/p&gt;`);
+			}
+		}	
+	});
+}
+</code></pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b29"><span>04</span> Сохранение изображения на сервере (jpg, png)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b29" class="container-code">
+
+<h4>index.html</h4>
+<pre>
+<code>
+&lt;label class="input-image" id="img1"&gt;
+	&lt;input type="file" accept="image/*" onchange="imageLoad('img1', this);" class="input-file"&gt;
+&lt;/label&gt;
+
+&lt;button onclick="imageSave('img1');"&gt;Сохранить изображение&lt;/button&gt;
+</code>
+</pre>
+
+<h4>css/main.css</h4>
+<pre>
+<code>
+.input-image {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+.input-file {
+    display: none;
+}
+</code>
+</pre>
+
+<h4>js/main.js</h4>
+<pre><code>
+// Загрузка изображения из input file в блок
+// 1 - input - изображение из input
+// 2 - id    - блок для устанавки изображения на background-image
+function imageLoad(id, input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            $('#'+id).css('background-image', 'url('+reader.result+')');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+</code></pre>
+<pre><code>
+// Сохранение изображения на сервер
+// 1 - id - id изображения
+function imageSave(id) {
+    var picture = $('#'+id).css('background-image');
+    var file = '../uploads/'+id;
+    var extension = imageExtension(picture);
+    picture = imageParse(picture); 
+    $.post("php/saveImage.php", {picture:picture, file:file, extension:extension});
+}
+</code></pre>
+<pre><code>
+// Определение расширения
+// 1 - picture - изображение в base64
+function imageExtension(picture) {
+    if (picture.indexOf('data:image/png') == -1) {
+        return '.jpg';
+    } else {
+        return '.png';
+    }
+}
+</code></pre>
+<pre><code>
+// Разбор изображения в base64 и вырезка только части, описывающей само изображение
+// изображение в формате base64:
+// - "url("data:image/png;base64,"
+// - само изображение "..."
+// - ")
+// формат может быть png, jpeg и т.д., поэтому мы ищем совпадение по фразе "base64", 
+// чтобы оставить только данные самого изображения
+// ищем позицию элемента
+// прибавляем 7 - это символы base64,
+// вычитаем 2 - это символы ")
+function imageParse(picture) {
+    var position = picture.search(/base64/) + 7; 
+    var result = picture.slice(position, picture.length-2); 
+    return result;
+}
+</code></pre>
+
+<h4>php/saveImage.php</h4>
+<pre><code>
+&lt;?php
+	$picture   = $_POST[picture];   // изображение в base64
+	$file      = $_POST[file];      // путь без расширения
+	$extension = $_POST[extension]; // расширение
+	$path      = $file.$extension;
+
+	// конвертирование base64 в изображение
+	$picture = base64_decode($picture);
+	$picture = imagecreatefromstring($picture);
+
+	// проверка расширения
+	if ($extension == '.png') {
+		imagealphablending($picture, false); // выключение альфа сопряжения
+		imagesavealpha($picture, true);      // установка альфа флага
+		header('Content-Type: image/png');   // header
+		imagepng($picture, $path);           // сохранение изображения
+	} else {
+		imagejpeg($picture, $path, 100);
+	}
+
+	// освобождение памяти
+	imagedestroy($picture);
+?&gt;
+</code></pre>
+
+</div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div class="text-header">PHP</div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b24"><span>02</span> Отправка HTML сообщения на почту</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b24" class="container-code">
+
+<h3>Отправка HTML сообщения на почту</h3>
+<pre>
+<code class="javascript">
+function sendEmailHtml() {
+	var name = 'Test Name';
+	var email = 'test@email.ru';
+	var style = 'style="border: 1px solid rgba(0,0,0,0.4); padding: 5px;"';
+
+	var message = `
+		&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+		&lt;html&gt;
+		&lt;head&gt;
+			&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+		&lt;/head&gt;
+		&lt;body&gt;
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; margin:0; padding:0;"&gt;
+			&lt;tr&gt;
+				&lt;td ${style}&gt;&lt;b&gt;Имя&lt;/b&gt;&lt;/td&gt;
+				&lt;td ${style}&gt;${name}&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td ${style}&gt;&lt;b&gt;E-mail&lt;/b&gt;&lt;/td&gt;
+				&lt;td ${style}&gt;${email}&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+		&lt;/body&gt;
+		&lt;/html&gt;`;
+
+	$.get("php/mail.php", {message:message}, function(data) {
+	    alert(data);
+	});	
+}
+</code>
+</pre>
+<pre>
+<code>
+&lt;?php
+	$to = 'user@example.com, anotheruser@example.com'; // получатель / получатели
+	$subject = 'Письмо с сайта';                       // тема письма
+	$message = $_GET[message];                         // сообщение
+    <span class="black">$headers  = 'MIME-Version: 1.0' . "\r\n";</span>
+    <span class="black">$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";</span>
+	$my  = mail($to, $subject, $message<span class="black">, $headers</span>);
+	if ($my) {
+		echo 'Письмо успешно отправлено!';
+    } else {
+    	echo 'Письмо не отправлено!';
+    }
+?&gt;
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b30"><span>08</span> PHP сессия</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b30" class="container-code">
+
+<h3>php/phpSessionLogin.php</h3>
+<pre>
+<code>
+&lt;?php
+	// autho_id == 0  // получить значение сессии при первом запуске страницы 
+	// autho_id == -1 // удалить сессию
+	// autho_id == 1  // добавить в сессию новое значение
+
+	$autho_id       = $_GET[autho_id];
+	$autho_login    = $_GET[autho_login];
+	$autho_password = $_GET[autho_password];
+
+	// стартуем сессию
+	session_start(); 
+
+	// если переменная сессии не установлена, то присваием ей пустое значение
+	if ( !isset($_SESSION['a_login']) ) {
+		$_SESSION['a_login'] = '';
+	}
+	if ( !isset($_SESSION['a_pass']) ) {
+		$_SESSION['a_pass'] = '';
+	}
+
+	// добавляем в сессию новое значение
+	if ($autho_id==1) {
+		$_SESSION['a_login'][0] = $autho_login;
+		$_SESSION['a_pass'][0] = $autho_password;
+	}
+
+	// удаляем сессию
+	if ($autho_id==-1) {
+		unset($_SESSION['a_login']);
+		unset($_SESSION['a_pass']);
+	}
+
+	// возвращаем значения сессии
+	$arr = array($_SESSION['a_login'][0], $_SESSION['a_pass'][0]);
+	echo json_encode($arr);
+?&gt;
+</code>
+</pre>
+
+<h3>index.html</h3>
+<pre>
+<code>
+&lt;input type="text" id="users-login"&gt;
+&lt;input type="text" id="users-password"&gt;
+&lt;button onclick="getCookie();"&gt;getCookie&lt;/button&gt;
+&lt;button onclick="setCookie();"&gt;setCookie&lt;/button&gt;
+&lt;button onclick="deleteCookie();"&gt;deleteCookie&lt;/button&gt;
+</code>
+</pre>
+
+<h3>js/main.js</h3>
+<pre>
+<code>
+function getCookie() {
+	$.get('php/phpSessionLogin.php', {autho_id:0, autho_login:0, autho_password:0}, function(data) {
+		var arrSession = eval(data);
+		var login = arrSession[0];
+		var password = arrSession[1];
+		$('body').append(login+' '+password);
+	});
+}
+function setCookie() {
+    var login = $('#users-login').val();
+    var password = $('#users-password').val();
+	$.get('php/phpSessionLogin.php', {autho_id:1, autho_login:login, autho_password:password}, function(data) {
+		//
+	});
+}
+function deleteCookie() {
+	$.get('php/phpSessionLogin.php', {autho_id:-1, autho_login:0, autho_password:0}, function(data) {
+		//
+	});
+}
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b31"><span>09</span> API ЯндексДеньги. Система оплаты на сайт</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b31" class="container-code">
+
+<pre>
+<code>
+<a href="https://tech.yandex.ru/" target="_blank">Технологии Яндекса</a>
+<a href="https://tech.yandex.ru/money/" target="_blank">API форм и кнопок</a>
+<a href="https://money.yandex.ru/settings?w=inform" target="_blank">Настройка отправки уведомления на e-mail</a>
+<a href="https://money.yandex.ru/myservices/online.xml" target="_blank">Настройка отправки уведомления в php</a>
+</code>
+</pre>
+
+<h3>index.html</h3>
+<pre>
+<code>
+&lt;form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml"&gt;
+	&lt;input type="hidden" name="receiver"      value="410011498839870"&gt;
+	&lt;input type="hidden" name="quickpay-form" value="shop"&gt;
+	&lt;input type="hidden" name="targets"       value="Оплата в магазине webpanda (targets)"&gt;
+	&lt;input type="hidden" name="sum"           value="2"&gt;
+	&lt;label&gt;&lt;input type="radio" name="paymentType" value="PC"&gt;Яндекс.Деньгами&lt;/label&gt;
+	&lt;label&gt;&lt;input type="radio" name="paymentType" value="AC"&gt;Банковской картой&lt;/label&gt;
+	&lt;label&gt;&lt;input type="radio" name="paymentType" value="PC"&gt;С баланса мобильного&lt;/label&gt;
+	&lt;input type="hidden" name="formcomment"   value="Товар #1 (formcomment)"&gt;
+	&lt;input type="hidden" name="short-dest"    value="Товар #1 (short-dest)"&gt;
+	&lt;input type="hidden" name="label"         value="Товар #1 (id)"&gt;
+	&lt;input type="hidden" name="comment"       value="Товар #1 (comment)"&gt;
+	&lt;input type="hidden" name="successURL"    value="http://ct66716.tmweb.ru/success.html"&gt;
+	&lt;input type="hidden" name="need-fio"      value="false"&gt;
+	&lt;input type="submit" value="Оплатить"&gt;
+&lt;/form&gt;</code>
+</pre>
+
+<h3>notification.php</h3>
+<pre>
+<code>
+&lt;?php
+	$label = $_POST['label']; 
+	$file = fopen('notification.txt', 'w');
+	fwrite($file, $label);
+	fclose($file);
+?&gt;
+</code>
+</pre>
+
+<h3>success.html</h3>
+<pre>
+<code class="html">
+&lt;h1&gt;Успешно!&lt;/h1&gt;
+</code>
+</pre>
+
+</div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b28"><span>04</span> Работа с файлами и директориями</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b28" class="container-code">
+
+<h4>Сохранение файла .txt на сервере</h4>
+<pre>
+<code>
+&lt;?php
+    $file_path = '../uploads/1.txt';
+    $file_content = 'Содержимое файла';
+    $file = fopen($file_path, 'w');
+    fwrite($file, $file_content);
+    fclose($file);
+?&gt;
+</code>
+</pre>
+
+<h4>Проверка существования файла</h4>
+<pre>
+<code>
+&lt;?php
+    $file = '../uploads/1.jpg';
+    if (file_exists($file)) {
+        echo "существует";
+    } else {
+        echo "не существует";
+    }
+?&gt;
+</code>
+</pre>
+
+<h4>Удаление файла если он есть</h4>
+<pre>
+<code>
+&lt;?php
+    $file = '../uploads/1.jpg';
+    if ( file_exists($file) ) {
+        unlink($file);
+    }
+?&gt;
+</code>
+</pre>
+
+<h4>Создание директории если ее нет</h4>
+<pre>
+<code>
+&lt;?php
+    $dir = '../uploads/'; 
+    if( ! is_dir( $dir ) ) mkdir( $dir, 0777 );
+?&gt;
+</code>
+</pre>
+
+<h4>Удаление директории с файлами и поддиректориями</h4>
+<pre>
+<code>
+&lt;?php
+    $dir = '../uploads/'; 
+    if( is_dir( $dir ) ) {
+        if ($objs = glob($dir."/*")) {
+            foreach($objs as $obj) {
+                is_dir($obj) ? removeDirectory($obj) : unlink($obj);
+            }
+        }
+        rmdir($dir);
+    }
+?&gt;
+</code>
+</pre>
+
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b29"><span>04</span> Сохранение изображения на сервере (jpg, png)</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b29" class="container-code">
+
+<h4>index.html</h4>
+<pre>
+<code>
+&lt;label class="input-image" id="img1"&gt;
+	&lt;input type="file" accept="image/*" onchange="imageLoad('img1', this);" class="input-file"&gt;
+&lt;/label&gt;
+
+&lt;button onclick="imageSave('img1');"&gt;Сохранить изображение&lt;/button&gt;
+</code>
+</pre>
+
+<h4>css/main.css</h4>
+<pre>
+<code>
+.input-image {
+    border: 2px dashed rgba(137,31,112,0.4);
+    background-color: #fbfbfb;
+    width: 200px;
+    height: 200px;
+    display: block;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;   
+    background-size: cover;
+    margin: 10px;
+}
+.input-file {
+    display: none;
+}
+</code>
+</pre>
+
+<h4>php/saveImage.php</h4>
+<pre>
+<code>
+&lt;?php
+	$picture   = $_POST[picture];   // изображение в base64
+	$file      = $_POST[file];      // путь без расширения
+	$extension = $_POST[extension]; // расширение
+	$path      = $file.$extension;
+
+	// конвертирование base64 в изображение
+	$picture = base64_decode($picture);
+	$picture = imagecreatefromstring($picture);
+
+	// проверка расширения
+	if ($extension == '.png') {
+		imagealphablending($picture, false); // выключение альфа сопряжения
+		imagesavealpha($picture, true);      // установка альфа флага
+		header('Content-Type: image/png');   // header
+		imagepng($picture, $path);           // сохранение изображения
+	} else {
+		imagejpeg($picture, $path, 100);
+	}
+
+	// освобождение памяти
+	imagedestroy($picture);
+?&gt;
+</code>
+</pre>
+
+<h4>js/main.js</h4>
+<pre>
+<code>
+// Загрузка изображения из input file в блок
+// 1 - input - изображение из input
+// 2 - id    - блок для устанавки изображения на background-image
+function imageLoad(id, input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            $('#'+id).css('background-image', 'url('+reader.result+')');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+</code>
+</pre>
+
+<pre>
+<code>
+// Сохранение изображения на сервер
+// 1 - id - id изображения
+function imageSave(id) {
+    var picture = $('#'+id).css('background-image');
+    if (isNewPicture(picture)) {
+        var file = '../uploads/'+id;
+        var extension = imageExtension(picture);
+        picture = imageParse(picture); 
+        $.post("php/saveImage.php", {picture:picture, file:file, extension:extension});
+    } 
+}
+</code>
+</pre>
+
+<pre>
+<code>
+// Проверка на новое изображение
+// 1 - picture - изображение в base64
+function isNewPicture(picture) {
+    if ((picture.indexOf('uploads')==-1) && (picture!='none')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+</code>
+</pre>
+
+<pre>
+<code>
+// Определение расширения
+// 1 - picture - изображение в base64
+function imageExtension(picture) {
+    if (picture.indexOf('data:image/png') == -1) {
+        return '.jpg';
+    } else {
+        return '.png';
+    }
+}
+</code>
+</pre>
+
+<pre>
+<code>
+// Разбор изображения в base64 и вырезка только части, описывающей само изображение
+// изображение в формате base64:
+// - "url("data:image/png;base64,"
+// - само изображение "..."
+// - ")
+// формат может быть png, jpeg и т.д., поэтому мы ищем совпадение по фразе "base64", 
+// чтобы оставить только данные самого изображения
+// ищем позицию элемента
+// прибавляем 7 - это символы base64,
+// вычитаем 2 - это символы ")
+function imageParse(picture) {
+    var position = picture.search(/base64/) + 7; 
+    var result = picture.slice(position, picture.length-2); 
+    return result;
+}
+</code>
+</pre>
+
+</div>
+
+
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<h2 id="b100"><span>00</span> Создание панели администрирования</h2>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<div id="code-b100" class="container-code">
+<pre><code class="html">
+<a href="https://github.com/anton-sergeenkov/ModulesAdminpanel" target="_blank">Adminpanel</a>
+</code></pre>
+</div>
+
+
+</div>
+<div id="container-show">
+	<h1>Web Courses. Module 3</h1>
+	<div id="container-show-content"></div>
+</div>
+</div>
+
+    <script src="libraries/jquery.js"></script>
+	<script src="libraries/highlight/highlight.pack.js"></script>
+	<script src="js/main.js"></script>
+	<script src="module/preloader/preloader.js"></script>
+	<script src="module/scroll_up/scrollUp.js"></script>
+	<script src="module/scroll_up/script.js"></script>
+</body>
+</html>

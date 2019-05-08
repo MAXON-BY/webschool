@@ -1,0 +1,4 @@
+#убираем html в конце адреса
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^(([^/]+/)*[^.]+)$ /$1.html [L]
