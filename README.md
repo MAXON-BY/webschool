@@ -9,7 +9,6 @@
 - [YouTube Playlist](#playlist-favorites)
 
 
-
 ## <a name="technologies"></a> Technologies
 **1. Верстка (Layout)**
 - CSS Flexible Box Layout Module
@@ -186,10 +185,6 @@ https://habr.com/
 
 ## <a name="playlist-favorites"></a> YouTube Playlist (other)
 
-### JavaScript   
-[Web Developer Blog - Уроки JavaScript (Практика)](https://www.youtube.com/playlist?list=PLVfMKQXDAhGUaEtJ_fOUz0F7TJtidE7Qw)  
-[ITVDN - Видеокурс по JavaScript Шаблонам](https://www.youtube.com/playlist?list=PLvItDmb0sZw9GTaAsuPGRydAUG61MnCsy)  
-[Гоша Дударь - Изучение технологий Ajax](https://www.youtube.com/playlist?list=PL0lO_mIqDDFUgBqIpiaES9vhZLJbucdUa)  
 
 ### React.js Redux
 [Code Dojo - Знакомство с React](https://www.youtube.com/playlist?list=PLqHlAwsJRxAONt5CnjMMeKdYGv1CDRUOl)  
@@ -209,32 +204,13 @@ https://habr.com/
 [ITVDN - Основы использования Git](https://www.youtube.com/playlist?list=PLvItDmb0sZw8WmkxzGJUZl6S3KU_-7-aP)  
 [WebForMySelf - Курс по Git и GitHub](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl3WULwVCR31iIslSq1hwgIR)  
 [JavaScript.ru - Скринкаст по Git](https://www.youtube.com/playlist?list=PLDyvV36pndZHkDRik6kKF6gSb0N0W995h)  
-[loftblog - Git](https://www.youtube.com/playlist?list=PLY4rE9dstrJyTdVJpv7FibSaXB4BHPInb)  
-[GeekBrains - Курс Git. Быстрый старт](https://www.youtube.com/playlist?list=PLmRNNqEA7JoM77hOJkPrLOfJQGizCLR3P)  
-
-### jQuery
-[ITVDN - Видеокурс по jQuery](https://www.youtube.com/playlist?list=PLvItDmb0sZw964PmBjUcB75x17RK7M5ZA)  
-[WebForMySelf - Курс по jQuery: основы](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl12wBcV4J8spvomNR5gXHn3)  
-[WebForMySelf - Библиотека JQuery UI](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl2ErRtLsArR5yAMG6jBcx0N)  
-[Гоша Дударь - Изучение библиотек jQuery](https://www.youtube.com/playlist?list=PL0lO_mIqDDFXQk_TTlSO7y7J1l5e-RMgi)  
-[Web Developer Blog - Уроки jQuery практика](https://www.youtube.com/playlist?list=PLVfMKQXDAhGV-wZwh_2uKTl3Ixk3v_Ptb)  
-[Web Developer Blog - Уроки jQuery](https://www.youtube.com/playlist?list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3)  
-[Glo Academy - Учим jQuery за 30 минут](https://www.youtube.com/playlist?list=PL3LQJkGQtzc5MFh51ACgwl8HXL3Hrqh5-)  
-[loftblog - Основы jQuery](https://www.youtube.com/playlist?list=PLY4rE9dstrJxST3xftg5kSCQdUB8hvj4S)  
-[loftblog - jQuery plugins](https://www.youtube.com/playlist?list=PLY4rE9dstrJz77dyBHYiv8ZpVWbxPG-gS)  
-
-### Gulp
-[JavaScript.ru - Скринкаст по Gulp](https://www.youtube.com/playlist?list=PLDyvV36pndZFLTE13V4qNWTZbeipNhCgQ)  
-[WebForMySelf - Курс по Gulp. Основы](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl3PMFfs-OtVk2j3krd3W2H2)  
-[Web Developer Blog - Уроки Gulp.js](https://www.youtube.com/playlist?list=PLVfMKQXDAhGVAFt9M6srMj_xHZmqvscLv)  
-[loftblog - Gulp.js](https://www.youtube.com/playlist?list=PLY4rE9dstrJwXCz1utct9b6Vub9VWQoKo)  
 
 ### Code Editor
+[Web Developer Blog - Text editor Atom](https://www.youtube.com/playlist?list=PLVfMKQXDAhGU1O2BDHi5eNyk1VookLsDZ)  
+[loftblog - Знакомство с Atom](https://www.youtube.com/playlist?list=PLY4rE9dstrJzpFizUPSJkSZ9fgdyB4hRL)  
 [Web Developer Blog - Sublime Text 2](https://www.youtube.com/playlist?list=PLVfMKQXDAhGXTtaRwrHzPLNQALkVhGWKj)  
 [WebForMySelf - Редактор Sublime Text](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl0dNJ9DZmy5em85KhNJP0-r)  
-[Web Developer Blog - Text editor Atom](https://www.youtube.com/playlist?list=PLVfMKQXDAhGU1O2BDHi5eNyk1VookLsDZ)  
 [loftblog - Обзор редактора Brackets](https://www.youtube.com/playlist?list=PLY4rE9dstrJw0t337xPeDF6FVki3vctfK)  
-[loftblog - Знакомство с Atom](https://www.youtube.com/playlist?list=PLY4rE9dstrJzpFizUPSJkSZ9fgdyB4hRL)  
 
 ### Sass PostCSS
 [WebUpBlog - SASS: основы препроцессора](https://www.youtube.com/playlist?list=PL5FCJIdFxiLlQOinyTqiFG14MgvRMOC_O)  
@@ -248,6 +224,10 @@ https://habr.com/
 [JavaScript.ru - Скринкаст по Node.JS](https://www.youtube.com/playlist?list=PLDyvV36pndZFWfEQpNixIHVvp191Hb3Gg)  
 [WebForMySelf - Курс по MongoDB](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl2_OLNZx3rfkhqA_TYwsXeN)  
 [loftblog - Пишем API на NodeJS](https://www.youtube.com/playlist?list=PLY4rE9dstrJzrDaSPKOrhNgQ19GhVl19u)  
+
+### JavaScript   
+[Web Developer Blog - Уроки JavaScript (Практика)](https://www.youtube.com/playlist?list=PLVfMKQXDAhGUaEtJ_fOUz0F7TJtidE7Qw)  
+[ITVDN - Видеокурс по JavaScript Шаблонам](https://www.youtube.com/playlist?list=PLvItDmb0sZw9GTaAsuPGRydAUG61MnCsy)  
 
 ### Other
 [Хекслет - Курс «Операционные системы»](https://www.youtube.com/playlist?list=PLo6puixMwuSPrKOCsJhrtr-m79mFthit9)  
@@ -267,3 +247,20 @@ https://habr.com/
 [loftblog - Ораторское мастерство для айтишника](https://www.youtube.com/playlist?list=PLY4rE9dstrJxUdjl7SRRC9bvGrM2_7fP-)  
 [loftblog - Монтаж видео в Adobe Premiere](https://www.youtube.com/playlist?list=PLY4rE9dstrJzkQckSV9tCwVoAt5A0LpQI)  
 [loftblog - Плагины для frontend разработчика](https://www.youtube.com/playlist?list=PLY4rE9dstrJwXErx2dREKRrM4krmJMB3x)  
+
+### jQuery
+[ITVDN - Видеокурс по jQuery](https://www.youtube.com/playlist?list=PLvItDmb0sZw964PmBjUcB75x17RK7M5ZA)  
+[WebForMySelf - Курс по jQuery: основы](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl12wBcV4J8spvomNR5gXHn3)  
+[WebForMySelf - Библиотека JQuery UI](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl2ErRtLsArR5yAMG6jBcx0N)  
+[Гоша Дударь - Изучение библиотек jQuery](https://www.youtube.com/playlist?list=PL0lO_mIqDDFXQk_TTlSO7y7J1l5e-RMgi)  
+[Web Developer Blog - Уроки jQuery практика](https://www.youtube.com/playlist?list=PLVfMKQXDAhGV-wZwh_2uKTl3Ixk3v_Ptb)  
+[Web Developer Blog - Уроки jQuery](https://www.youtube.com/playlist?list=PLVfMKQXDAhGXQcouhIblV910Rv7lRscH3)  
+[Glo Academy - Учим jQuery за 30 минут](https://www.youtube.com/playlist?list=PL3LQJkGQtzc5MFh51ACgwl8HXL3Hrqh5-)  
+[loftblog - Основы jQuery](https://www.youtube.com/playlist?list=PLY4rE9dstrJxST3xftg5kSCQdUB8hvj4S)  
+[loftblog - jQuery plugins](https://www.youtube.com/playlist?list=PLY4rE9dstrJz77dyBHYiv8ZpVWbxPG-gS)  
+
+### Gulp
+[JavaScript.ru - Скринкаст по Gulp](https://www.youtube.com/playlist?list=PLDyvV36pndZFLTE13V4qNWTZbeipNhCgQ)  
+[WebForMySelf - Курс по Gulp. Основы](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl3PMFfs-OtVk2j3krd3W2H2)  
+[Web Developer Blog - Уроки Gulp.js](https://www.youtube.com/playlist?list=PLVfMKQXDAhGVAFt9M6srMj_xHZmqvscLv)  
+[loftblog - Gulp.js](https://www.youtube.com/playlist?list=PLY4rE9dstrJwXCz1utct9b6Vub9VWQoKo)  
